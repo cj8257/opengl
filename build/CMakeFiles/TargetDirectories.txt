@@ -1,0 +1,3 @@
+/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/SensorMonitor.dir
+/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/rebuild_cache.dir

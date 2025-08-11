@@ -1,0 +1,1 @@
+g++ sender.cpp -o sender -lzmq -std=c++17 -lpthread

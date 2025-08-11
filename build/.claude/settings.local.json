@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./vcpkg/vcpkg install:*)",
+      "Bash(timeout:*)",
+      "Bash(make:*)"
+    ],
+    "deny": []
+  }
+}
