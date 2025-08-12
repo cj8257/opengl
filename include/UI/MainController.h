@@ -12,6 +12,9 @@ public:
     void clear();
     void update();
     void drawUI();
+    
+    // 新增：播放控制
+    void togglePlayback();
 
 private:
     DataManager dataManager;

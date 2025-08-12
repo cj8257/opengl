@@ -72,10 +72,24 @@ include CMakeFiles/SensorMonitor.dir/flags.make
 CMakeFiles/SensorMonitor.dir/codegen:
 .PHONY : CMakeFiles/SensorMonitor.dir/codegen
 
+CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
+CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main_refactored.cpp
+CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o -MF CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o.d -o CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main_refactored.cpp
+
+CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main_refactored.cpp > CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.i
+
+CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main_refactored.cpp -o CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.s
+
 CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
 CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/Core/DataManager.cpp
 CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o -MF CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o.d -o CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/Core/DataManager.cpp
 
 CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.i: cmake_force
@@ -89,7 +103,7 @@ CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.s: cmake_force
 CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
 CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/IO/ZeroMQSubscriber.cpp
 CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o -MF CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o.d -o CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/IO/ZeroMQSubscriber.cpp
 
 CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.s: cmake_force
 CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
 CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/UI/MainController.cpp
 CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o -MF CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o.d -o CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/UI/MainController.cpp
 
 CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.i: cmake_force
@@ -113,20 +127,6 @@ CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.i: cmake_force
 CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/UI/MainController.cpp -o CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.s
-
-CMakeFiles/SensorMonitor.dir/src/main.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
-CMakeFiles/SensorMonitor.dir/src/main.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main.cpp
-CMakeFiles/SensorMonitor.dir/src/main.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SensorMonitor.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/src/main.cpp.o -MF CMakeFiles/SensorMonitor.dir/src/main.cpp.o.d -o CMakeFiles/SensorMonitor.dir/src/main.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main.cpp
-
-CMakeFiles/SensorMonitor.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SensorMonitor.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main.cpp > CMakeFiles/SensorMonitor.dir/src/main.cpp.i
-
-CMakeFiles/SensorMonitor.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/src/main.cpp -o CMakeFiles/SensorMonitor.dir/src/main.cpp.s
 
 CMakeFiles/SensorMonitor.dir/third_party/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
 CMakeFiles/SensorMonitor.dir/third_party/imgui/backends/imgui_impl_glfw.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/backends/imgui_impl_glfw.cpp
@@ -226,10 +226,52 @@ CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_widgets.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/imgui_widgets.cpp -o CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_widgets.cpp.s
 
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot.cpp
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o -MF CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o.d -o CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot.cpp
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot.cpp > CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.i
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot.cpp -o CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.s
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_demo.cpp
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o -MF CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o.d -o CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_demo.cpp
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_demo.cpp > CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.i
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_demo.cpp -o CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.s
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o: CMakeFiles/SensorMonitor.dir/flags.make
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_items.cpp
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o -MF CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o.d -o CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_items.cpp
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_items.cpp > CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.i
+
+CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot_items.cpp -o CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.s
+
 CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o: CMakeFiles/SensorMonitor.dir/flags.make
 CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/glad/src/glad.c
 CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o: CMakeFiles/SensorMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o -MF CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o.d -o CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/glad/src/glad.c
 
 CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.i: cmake_force
@@ -242,10 +284,10 @@ CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.s: cmake_force
 
 # Object files for target SensorMonitor
 SensorMonitor_OBJECTS = \
+"CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o" \
-"CMakeFiles/SensorMonitor.dir/src/main.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/third_party/imgui/backends/imgui_impl_glfw.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/third_party/imgui/backends/imgui_impl_opengl3.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui.cpp.o" \
@@ -253,15 +295,18 @@ SensorMonitor_OBJECTS = \
 "CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_draw.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_tables.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_widgets.cpp.o" \
+"CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o" \
+"CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o" \
+"CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o" \
 "CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o"
 
 # External object files for target SensorMonitor
 SensorMonitor_EXTERNAL_OBJECTS =
 
+SensorMonitor: CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/src/Core/DataManager.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/src/IO/ZeroMQSubscriber.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o
-SensorMonitor: CMakeFiles/SensorMonitor.dir/src/main.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/backends/imgui_impl_glfw.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/backends/imgui_impl_opengl3.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui.cpp.o
@@ -269,13 +314,16 @@ SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_demo.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_draw.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_tables.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_widgets.cpp.o
+SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o
+SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o
+SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/third_party/glad/src/glad.c.o
 SensorMonitor: CMakeFiles/SensorMonitor.dir/build.make
 SensorMonitor: /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/lib/libglfw3.a
 SensorMonitor: /usr/lib/x86_64-linux-gnu/librt.so
 SensorMonitor: /usr/lib/x86_64-linux-gnu/libm.so
 SensorMonitor: CMakeFiles/SensorMonitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable SensorMonitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable SensorMonitor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SensorMonitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

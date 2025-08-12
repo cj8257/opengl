@@ -202,29 +202,29 @@ src/UI/MainController.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.s
 .PHONY : src/UI/MainController.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+src/main_refactored.o: src/main_refactored.cpp.o
+.PHONY : src/main_refactored.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+src/main_refactored.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.o
+.PHONY : src/main_refactored.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/main_refactored.i: src/main_refactored.cpp.i
+.PHONY : src/main_refactored.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/main_refactored.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.i
+.PHONY : src/main_refactored.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/main_refactored.s: src/main_refactored.cpp.s
+.PHONY : src/main_refactored.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/main_refactored.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/src/main_refactored.cpp.s
+.PHONY : src/main_refactored.cpp.s
 
 third_party/glad/src/glad.o: third_party/glad/src/glad.c.o
 .PHONY : third_party/glad/src/glad.o
@@ -418,6 +418,78 @@ third_party/imgui/imgui_widgets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/imgui/imgui_widgets.cpp.s
 .PHONY : third_party/imgui/imgui_widgets.cpp.s
 
+third_party/implot/implot.o: third_party/implot/implot.cpp.o
+.PHONY : third_party/implot/implot.o
+
+# target to build an object file
+third_party/implot/implot.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.o
+.PHONY : third_party/implot/implot.cpp.o
+
+third_party/implot/implot.i: third_party/implot/implot.cpp.i
+.PHONY : third_party/implot/implot.i
+
+# target to preprocess a source file
+third_party/implot/implot.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.i
+.PHONY : third_party/implot/implot.cpp.i
+
+third_party/implot/implot.s: third_party/implot/implot.cpp.s
+.PHONY : third_party/implot/implot.s
+
+# target to generate assembly for a file
+third_party/implot/implot.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot.cpp.s
+.PHONY : third_party/implot/implot.cpp.s
+
+third_party/implot/implot_demo.o: third_party/implot/implot_demo.cpp.o
+.PHONY : third_party/implot/implot_demo.o
+
+# target to build an object file
+third_party/implot/implot_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.o
+.PHONY : third_party/implot/implot_demo.cpp.o
+
+third_party/implot/implot_demo.i: third_party/implot/implot_demo.cpp.i
+.PHONY : third_party/implot/implot_demo.i
+
+# target to preprocess a source file
+third_party/implot/implot_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.i
+.PHONY : third_party/implot/implot_demo.cpp.i
+
+third_party/implot/implot_demo.s: third_party/implot/implot_demo.cpp.s
+.PHONY : third_party/implot/implot_demo.s
+
+# target to generate assembly for a file
+third_party/implot/implot_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot_demo.cpp.s
+.PHONY : third_party/implot/implot_demo.cpp.s
+
+third_party/implot/implot_items.o: third_party/implot/implot_items.cpp.o
+.PHONY : third_party/implot/implot_items.o
+
+# target to build an object file
+third_party/implot/implot_items.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.o
+.PHONY : third_party/implot/implot_items.cpp.o
+
+third_party/implot/implot_items.i: third_party/implot/implot_items.cpp.i
+.PHONY : third_party/implot/implot_items.i
+
+# target to preprocess a source file
+third_party/implot/implot_items.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.i
+.PHONY : third_party/implot/implot_items.cpp.i
+
+third_party/implot/implot_items.s: third_party/implot/implot_items.cpp.s
+.PHONY : third_party/implot/implot_items.s
+
+# target to generate assembly for a file
+third_party/implot/implot_items.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SensorMonitor.dir/build.make CMakeFiles/SensorMonitor.dir/third_party/implot/implot_items.cpp.s
+.PHONY : third_party/implot/implot_items.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -436,9 +508,9 @@ help:
 	@echo "... src/UI/MainController.o"
 	@echo "... src/UI/MainController.i"
 	@echo "... src/UI/MainController.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... src/main_refactored.o"
+	@echo "... src/main_refactored.i"
+	@echo "... src/main_refactored.s"
 	@echo "... third_party/glad/src/glad.o"
 	@echo "... third_party/glad/src/glad.i"
 	@echo "... third_party/glad/src/glad.s"
@@ -463,6 +535,15 @@ help:
 	@echo "... third_party/imgui/imgui_widgets.o"
 	@echo "... third_party/imgui/imgui_widgets.i"
 	@echo "... third_party/imgui/imgui_widgets.s"
+	@echo "... third_party/implot/implot.o"
+	@echo "... third_party/implot/implot.i"
+	@echo "... third_party/implot/implot.s"
+	@echo "... third_party/implot/implot_demo.o"
+	@echo "... third_party/implot/implot_demo.i"
+	@echo "... third_party/implot/implot_demo.s"
+	@echo "... third_party/implot/implot_items.o"
+	@echo "... third_party/implot/implot_items.i"
+	@echo "... third_party/implot/implot_items.s"
 .PHONY : help
 
 

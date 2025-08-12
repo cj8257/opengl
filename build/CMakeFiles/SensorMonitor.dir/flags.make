@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/include -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/backends -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/glad/include -isystem /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/include
+C_INCLUDES = -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/include -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/backends -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/glad/include -isystem /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/include
 
 C_FLAGS = 
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/include -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/backends -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/glad/include -isystem /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/include
+CXX_INCLUDES = -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/include -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/backends -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot -I/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/glad/include -isystem /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/include
 
 CXX_FLAGS = -std=gnu++17
 

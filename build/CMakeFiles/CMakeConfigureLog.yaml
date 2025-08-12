@@ -5,7 +5,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
@@ -116,13 +116,12 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
   -
     kind: "find-v1"
     backtrace:
       - "vcpkg/scripts/buildsystems/vcpkg.cmake:305 (find_program)"
-      - "/usr/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:149 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "/usr/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:146 (include)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "Z_VCPKG_CL"
     description: "Path to a program."
@@ -270,19 +269,18 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       The system is: Linux - 5.15.167.4-microsoft-standard-WSL2 - x86_64
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Path to a program."
@@ -757,14 +755,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER"
     description: "C compiler"
@@ -1096,7 +1093,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
@@ -1106,7 +1102,7 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -1173,7 +1169,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "message-v1"
@@ -1181,7 +1176,7 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler: /usr/bin/cc 
@@ -1202,7 +1197,7 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -1481,14 +1476,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -1767,14 +1761,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -2053,14 +2046,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -2339,14 +2331,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -2625,14 +2616,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -2911,14 +2901,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -3197,14 +3186,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -3483,14 +3471,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -3811,14 +3798,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -4097,14 +4083,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -4425,14 +4410,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -4840,14 +4824,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_C_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -5255,14 +5238,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompiler.cmake:54 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER"
     description: "CXX compiler"
@@ -5345,7 +5327,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
@@ -5355,7 +5336,7 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -5422,7 +5403,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "message-v1"
@@ -5430,7 +5410,7 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /usr/bin/c++ 
@@ -5451,7 +5431,7 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -5859,14 +5839,13 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -6274,19 +6253,18 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu"
-      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu"
+      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA"
+      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -6299,13 +6277,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu'
+        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_df9dd/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_df9dd.dir/build.make CMakeFiles/cmTC_df9dd.dir/build
-        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu'
-        Building C object CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_04847/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_04847.dir/build.make CMakeFiles/cmTC_04847.dir/build
+        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA'
+        Building C object CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:hsa
@@ -6314,8 +6292,8 @@ events:
         Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
         Thread model: posix
         gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-         /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccY10qkL.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccx5B0bh.s
         GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
         	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
         
@@ -6335,14 +6313,14 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 01da938ff5dc2163489aa33cb3b747a7
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-         as -v --64 -o CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o /tmp/ccY10qkL.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o /tmp/ccx5B0bh.s
         GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-        Linking C executable cmTC_df9dd
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df9dd.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+        Linking C executable cmTC_04847
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04847.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -6354,14 +6332,14 @@ events:
         gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df9dd' '-mtune=generic' '-march=x86-64'
-         /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrepwHc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_df9dd /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04847' '-mtune=generic' '-march=x86-64'
+         /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYkCuLK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_04847 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
         collect2 version 9.4.0
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrepwHc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_df9dd /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYkCuLK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_04847 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.34
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df9dd' '-mtune=generic' '-march=x86-64'
-        /usr/bin/cc -v -Wl,-v CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -o cmTC_df9dd
-        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04847' '-mtune=generic' '-march=x86-64'
+        /usr/bin/cc -v -Wl,-v CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -o cmTC_04847
+        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA'
         
       exitCode: 0
   -
@@ -6369,7 +6347,7 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
@@ -6391,18 +6369,18 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu']
+        ignore line: [Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_df9dd/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_df9dd.dir/build.make CMakeFiles/cmTC_df9dd.dir/build]
-        ignore line: [make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UYUdiu']
-        ignore line: [Building C object CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_04847/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_04847.dir/build.make CMakeFiles/cmTC_04847.dir/build]
+        ignore line: [make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-raR5wA']
+        ignore line: [Building C object CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
@@ -6411,8 +6389,8 @@ events:
         ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccY10qkL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-4.1/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccx5B0bh.s]
         ignore line: [GNU C17 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
         ignore line: []
@@ -6432,14 +6410,14 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 01da938ff5dc2163489aa33cb3b747a7]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o /tmp/ccY10qkL.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o /tmp/ccx5B0bh.s]
         ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking C executable cmTC_df9dd]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df9dd.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking C executable cmTC_04847]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04847.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -6451,13 +6429,13 @@ events:
         ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_df9dd' '-mtune=generic' '-march=x86-64']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrepwHc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_df9dd /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_04847' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYkCuLK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_04847 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccrepwHc.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccYkCuLK.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -6475,7 +6453,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_df9dd] ==> ignore
+          arg [cmTC_04847] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o]
@@ -6488,7 +6466,7 @@ events:
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -6503,7 +6481,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 9.4.0]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrepwHc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_df9dd /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_df9dd.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYkCuLK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_04847 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_04847.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'C': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -6528,7 +6506,7 @@ events:
       - "/usr/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the C compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.34
@@ -6537,12 +6515,12 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr"
-      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr"
+      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD"
+      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -6556,13 +6534,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr'
+        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cf61b/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_cf61b.dir/build.make CMakeFiles/cmTC_cf61b.dir/build
-        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr'
-        Building CXX object CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_25879/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_25879.dir/build.make CMakeFiles/cmTC_25879.dir/build
+        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD'
+        Building CXX object CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:hsa
@@ -6571,8 +6549,8 @@ events:
         Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
         Thread model: posix
         gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccJ7rMd6.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccwUAAPD.s
         GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)
         	compiled by GNU C version 9.4.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
         
@@ -6596,14 +6574,14 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: 3d1eba838554fa2348dba760e4770469
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         as -v --64 -o CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccJ7rMd6.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccwUAAPD.s
         GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        Linking CXX executable cmTC_cf61b
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf61b.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_25879
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25879.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper
@@ -6615,14 +6593,14 @@ events:
         gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
         COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cf61b' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-         /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpnWHHx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cf61b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_25879' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyAycq4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_25879 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
         collect2 version 9.4.0
-        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpnWHHx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cf61b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
+        /usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyAycq4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_25879 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o
         GNU ld (GNU Binutils for Ubuntu) 2.34
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cf61b' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-        /usr/bin/c++ -v -Wl,-v CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_cf61b
-        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_25879' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        /usr/bin/c++ -v -Wl,-v CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_25879
+        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD'
         
       exitCode: 0
   -
@@ -6630,7 +6608,7 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -6658,18 +6636,18 @@ events:
     backtrace:
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr']
+        ignore line: [Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_cf61b/fast]
-        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_cf61b.dir/build.make CMakeFiles/cmTC_cf61b.dir/build]
-        ignore line: [make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HNfoLr']
-        ignore line: [Building CXX object CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_25879/fast]
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_25879.dir/build.make CMakeFiles/cmTC_25879.dir/build]
+        ignore line: [make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-ApQBJD']
+        ignore line: [Building CXX object CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:hsa]
@@ -6678,8 +6656,8 @@ events:
         ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 9.4.0-1ubuntu1~20.04.2' --with-bugurl=file:///usr/share/doc/gcc-9/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ gm2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-9 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-9-9QDOt0/gcc-9-9.4.0/debian/tmp-nvptx/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
         ignore line: [Thread model: posix]
         ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccJ7rMd6.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/9/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-4.1/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccwUAAPD.s]
         ignore line: [GNU C++14 (Ubuntu 9.4.0-1ubuntu1~20.04.2) version 9.4.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 9.4.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
         ignore line: []
@@ -6703,14 +6681,14 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: 3d1eba838554fa2348dba760e4770469]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccJ7rMd6.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccwUAAPD.s]
         ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        ignore line: [Linking CXX executable cmTC_cf61b]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf61b.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_25879]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25879.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper]
@@ -6722,13 +6700,13 @@ events:
         ignore line: [gcc version 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) ]
         ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cf61b' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpnWHHx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cf61b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_25879' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/lib/gcc/x86_64-linux-gnu/9/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyAycq4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_25879 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccpnWHHx.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccyAycq4.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -6746,7 +6724,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_cf61b] ==> ignore
+          arg [cmTC_25879] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o]
@@ -6759,7 +6737,7 @@ events:
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/9/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/9/../../..]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -6770,7 +6748,7 @@ events:
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
         ignore line: [collect2 version 9.4.0]
-        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpnWHHx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_cf61b /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_cf61b.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/lib/gcc/x86_64-linux-gnu/9/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/9/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyAycq4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_25879 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.. -v CMakeFiles/cmTC_25879.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
         collapse obj [/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
@@ -6795,7 +6773,7 @@ events:
       - "/usr/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
       - "/usr/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/usr/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:3 (project)"
+      - "CMakeLists.txt:2 (project)"
     message: |
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.34
@@ -6810,12 +6788,12 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
       - "vcpkg/installed/x64-linux/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
       - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-V5BqKt"
-      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-V5BqKt"
+      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PSb04z"
+      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PSb04z"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -6828,25 +6806,25 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-V5BqKt'
+        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PSb04z'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2482f/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_2482f.dir/build.make CMakeFiles/cmTC_2482f.dir/build
-        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-V5BqKt'
-        Building C object CMakeFiles/cmTC_2482f.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_2482f.dir/src.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-V5BqKt/src.c
-        Linking C executable cmTC_2482f
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2482f.dir/link.txt --verbose=1
-        /usr/bin/ld: CMakeFiles/cmTC_2482f.dir/src.c.o: in function `main':
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4a5e6/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_4a5e6.dir/build.make CMakeFiles/cmTC_4a5e6.dir/build
+        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PSb04z'
+        Building C object CMakeFiles/cmTC_4a5e6.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4a5e6.dir/src.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PSb04z/src.c
+        Linking C executable cmTC_4a5e6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a5e6.dir/link.txt --verbose=1
+        /usr/bin/ld: CMakeFiles/cmTC_4a5e6.dir/src.c.o: in function `main':
         src.c:(.text+0x46): undefined reference to `pthread_create'
         /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
         /usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
         /usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
         collect2: error: ld returned 1 exit status
-        /usr/bin/cc CMakeFiles/cmTC_2482f.dir/src.c.o -o cmTC_2482f
-        make[1]: *** [CMakeFiles/cmTC_2482f.dir/build.make:102: cmTC_2482f] Error 1
-        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-V5BqKt'
-        make: *** [Makefile:134: cmTC_2482f/fast] Error 2
+        /usr/bin/cc CMakeFiles/cmTC_4a5e6.dir/src.c.o -o cmTC_4a5e6
+        make[1]: *** [CMakeFiles/cmTC_4a5e6.dir/build.make:102: cmTC_4a5e6] Error 1
+        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PSb04z'
+        make: *** [Makefile:134: cmTC_4a5e6/fast] Error 2
         
       exitCode: 2
   -
@@ -6859,12 +6837,12 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
       - "vcpkg/installed/x64-linux/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
       - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HnSY1p"
-      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HnSY1p"
+      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PndP4z"
+      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PndP4z"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -6877,21 +6855,21 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HnSY1p'
+        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PndP4z'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2d6e0/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_2d6e0.dir/build.make CMakeFiles/cmTC_2d6e0.dir/build
-        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HnSY1p'
-        Building C object CMakeFiles/cmTC_2d6e0.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_2d6e0.dir/CheckFunctionExists.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HnSY1p/CheckFunctionExists.c
-        Linking C executable cmTC_2d6e0
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d6e0.dir/link.txt --verbose=1
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_11398/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_11398.dir/build.make CMakeFiles/cmTC_11398.dir/build
+        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PndP4z'
+        Building C object CMakeFiles/cmTC_11398.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_11398.dir/CheckFunctionExists.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PndP4z/CheckFunctionExists.c
+        Linking C executable cmTC_11398
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_11398.dir/link.txt --verbose=1
         /usr/bin/ld: cannot find -lpthreads
         collect2: error: ld returned 1 exit status
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_2d6e0.dir/CheckFunctionExists.c.o -o cmTC_2d6e0  -lpthreads
-        make[1]: *** [CMakeFiles/cmTC_2d6e0.dir/build.make:102: cmTC_2d6e0] Error 1
-        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-HnSY1p'
-        make: *** [Makefile:134: cmTC_2d6e0/fast] Error 2
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_11398.dir/CheckFunctionExists.c.o -o cmTC_11398  -lpthreads
+        make[1]: *** [CMakeFiles/cmTC_11398.dir/build.make:102: cmTC_11398] Error 1
+        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-PndP4z'
+        make: *** [Makefile:134: cmTC_11398/fast] Error 2
         
       exitCode: 2
   -
@@ -6904,12 +6882,12 @@ events:
       - "/usr/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
       - "vcpkg/installed/x64-linux/share/glfw3/glfw3Config.cmake:2 (find_dependency)"
       - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UMjJnr"
-      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UMjJnr"
+      source: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-4KobZC"
+      binary: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-4KobZC"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -6922,24 +6900,24 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UMjJnr'
+        Change Dir: '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-4KobZC'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d8bae/fast
-        /usr/bin/make  -f CMakeFiles/cmTC_d8bae.dir/build.make CMakeFiles/cmTC_d8bae.dir/build
-        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UMjJnr'
-        Building C object CMakeFiles/cmTC_d8bae.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d8bae.dir/CheckFunctionExists.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UMjJnr/CheckFunctionExists.c
-        Linking C executable cmTC_d8bae
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d8bae.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_d8bae.dir/CheckFunctionExists.c.o -o cmTC_d8bae  -lpthread
-        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-UMjJnr'
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5a5cb/fast
+        /usr/bin/make  -f CMakeFiles/cmTC_5a5cb.dir/build.make CMakeFiles/cmTC_5a5cb.dir/build
+        make[1]: Entering directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-4KobZC'
+        Building C object CMakeFiles/cmTC_5a5cb.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5a5cb.dir/CheckFunctionExists.c.o -c /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-4KobZC/CheckFunctionExists.c
+        Linking C executable cmTC_5a5cb
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a5cb.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_5a5cb.dir/CheckFunctionExists.c.o -o cmTC_5a5cb  -lpthread
+        make[1]: Leaving directory '/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/CMakeScratch/TryCompile-4KobZC'
         
       exitCode: 0
   -
     kind: "find_package-v1"
     backtrace:
       - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:8 (find_package)"
+      - "CMakeLists.txt:9 (find_package)"
     name: "glfw3"
     configs:
       -
@@ -7057,141 +7035,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:9 (find_package)"
-    name: "glad"
-    configs:
-      -
-        filename: "gladConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "glad-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "required_explicit"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "glad"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/gladConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/glad-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/gladConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/glad-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/gladConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/glad-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/gladConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/glad-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found:
-      path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/share/glad/gladConfig.cmake"
-      mode: "config"
-      version: "0.1.36"
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
-      ENV{PATH}:
-        - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
-        - "/opt/Qt5.13.1/5.13.1/gcc_64/bin"
-        - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/usr/lib/wsl/lib"
-        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
-        - "/mnt/e/VMware/bin/"
-        - "/mnt/e/python/Scripts/"
-        - "/mnt/e/python/"
-        - "/mnt/c/Program Files/Java/jdk-17/bin"
-        - "/mnt/c/Program Files/Java/jdk-17/jre/bin"
-        - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath"
-        - "/mnt/c/WINDOWS/system32"
-        - "/mnt/c/WINDOWS"
-        - "/mnt/c/WINDOWS/System32/Wbem"
-        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
-        - "/mnt/c/WINDOWS/System32/OpenSSH/"
-        - "/mnt/c/Users/admin/AppData/Roaming/nvm"
-        - "/mnt/c/Program Files/nodejs"
-        - "/mnt/c/Program Files/Git/cmd"
-        - "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll"
-        - "/mnt/e/MinGW/bin"
-        - "/mnt/e/Qt/5.14.2/mingw73_32/bin"
-        - "/mnt/e/3.3.8/bin"
-        - "/mnt/e/3.3.8/lib"
-        - "/mnt/c/Strawberry/c/bin"
-        - "/mnt/c/Strawberry/perl/site/bin"
-        - "/mnt/c/Strawberry/perl/bin"
-        - "/mnt/c/Program Files/CMake/bin"
-        - "/mnt/c/Program Files/Docker/Docker/resources/bin"
-        - "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/"
-        - "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps"
-        - "/mnt/e/vscode/Microsoft VS Code/bin"
-        - "/mnt/c/Users/admin/AppData/Roaming/nvm"
-        - "/mnt/c/Program Files/nodejs"
-        - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
-        - "/snap/bin"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -7208,461 +7051,6 @@ events:
     backtrace:
       - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
       - "CMakeLists.txt:10 (find_package)"
-    name: "imgui"
-    configs:
-      -
-        filename: "imguiConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "imgui-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "required_explicit"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "imgui"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/games/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/games/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/games/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/games/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/wsl/lib/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/wsl/lib/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/VMware/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/VMware/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/python/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/python/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/jre/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/jre/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/system32/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/system32/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/Wbem/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/Wbem/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/OpenSSH/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/OpenSSH/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Roaming/nvm/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Roaming/nvm/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/nodejs/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/nodejs/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Git/cmd/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Git/cmd/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/MinGW/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/MinGW/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/c/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/c/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/site/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/site/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/CMake/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/CMake/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Docker/Docker/resources/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Docker/Docker/resources/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/vscode/Microsoft VS Code/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/vscode/Microsoft VS Code/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/snap/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/snap/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/imguiConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/imgui-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found: null
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
-      ENV{PATH}:
-        - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
-        - "/opt/Qt5.13.1/5.13.1/gcc_64/bin"
-        - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/usr/lib/wsl/lib"
-        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
-        - "/mnt/e/VMware/bin/"
-        - "/mnt/e/python/Scripts/"
-        - "/mnt/e/python/"
-        - "/mnt/c/Program Files/Java/jdk-17/bin"
-        - "/mnt/c/Program Files/Java/jdk-17/jre/bin"
-        - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath"
-        - "/mnt/c/WINDOWS/system32"
-        - "/mnt/c/WINDOWS"
-        - "/mnt/c/WINDOWS/System32/Wbem"
-        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
-        - "/mnt/c/WINDOWS/System32/OpenSSH/"
-        - "/mnt/c/Users/admin/AppData/Roaming/nvm"
-        - "/mnt/c/Program Files/nodejs"
-        - "/mnt/c/Program Files/Git/cmd"
-        - "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll"
-        - "/mnt/e/MinGW/bin"
-        - "/mnt/e/Qt/5.14.2/mingw73_32/bin"
-        - "/mnt/e/3.3.8/bin"
-        - "/mnt/e/3.3.8/lib"
-        - "/mnt/c/Strawberry/c/bin"
-        - "/mnt/c/Strawberry/perl/site/bin"
-        - "/mnt/c/Strawberry/perl/bin"
-        - "/mnt/c/Program Files/CMake/bin"
-        - "/mnt/c/Program Files/Docker/Docker/resources/bin"
-        - "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/"
-        - "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps"
-        - "/mnt/e/vscode/Microsoft VS Code/bin"
-        - "/mnt/c/Users/admin/AppData/Roaming/nvm"
-        - "/mnt/c/Program Files/nodejs"
-        - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
-        - "/snap/bin"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
-...
-
----
-events:
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:25 (find_package)"
     name: "nlohmann_json"
     configs:
       -
@@ -7695,27 +7083,11 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/nlohmann_jsonConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/nlohmann_json-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -7735,69 +7107,21 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/nlohmann_jsonConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/nlohmann_json-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/nlohmann_jsonConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/nlohmann_json-config.cmake"
         mode: "config"
         reason: "no_exist"
     found:
-      path: "/usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake"
+      path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/share/nlohmann_json/nlohmann_jsonConfig.cmake"
       mode: "config"
-      version: "3.7.3"
+      version: "3.12.0"
     search_context:
       CMAKE_PREFIX_PATH:
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
         - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
+        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
       ENV{PATH}:
         - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
         - "/opt/Qt5.13.1/5.13.1/gcc_64/bin"
@@ -7844,7 +7168,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -7855,12 +7178,13 @@ events:
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
-      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
+      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
   -
     kind: "find_package-v1"
     backtrace:
-      - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:26 (find_package)"
+      - "vcpkg/installed/x64-linux/share/zeromq/vcpkg-cmake-wrapper.cmake:1 (_find_package)"
+      - "vcpkg/scripts/buildsystems/vcpkg.cmake:850 (include)"
+      - "CMakeLists.txt:11 (find_package)"
     name: "ZeroMQ"
     configs:
       -
@@ -7893,27 +7217,11 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/ZeroMQConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/zeromq-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
@@ -7933,14 +7241,6 @@ events:
         mode: "config"
         reason: "no_exist"
       -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/ZeroMQConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -7948,307 +7248,14 @@ events:
         path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/zeromq-config.cmake"
         mode: "config"
         reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/games/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/games/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/games/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/games/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/wsl/lib/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/wsl/lib/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/VMware/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/VMware/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/python/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/python/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/jre/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/jre/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/system32/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/system32/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/Wbem/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/Wbem/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/OpenSSH/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/OpenSSH/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Roaming/nvm/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Roaming/nvm/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/nodejs/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/nodejs/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Git/cmd/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Git/cmd/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/MinGW/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/MinGW/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/c/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/c/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/site/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/site/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/CMake/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/CMake/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Docker/Docker/resources/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Docker/Docker/resources/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/vscode/Microsoft VS Code/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/vscode/Microsoft VS Code/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/snap/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/snap/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/ZeroMQConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/zeromq-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found: null
+    found:
+      path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/share/zeromq/ZeroMQConfig.cmake"
+      mode: "config"
+      version: "4.3.5"
     search_context:
       CMAKE_PREFIX_PATH:
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
         - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
+        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
       ENV{PATH}:
         - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
         - "/opt/Qt5.13.1/5.13.1/gcc_64/bin"
@@ -8295,7 +7302,6 @@ events:
         - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
         - "/snap/bin"
         - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
       CMAKE_INSTALL_PREFIX: "/usr/local"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "/usr/local"
@@ -8306,460 +7312,5 @@ events:
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
-      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
-...
-
----
-events:
-  -
-    kind: "find_package-v1"
-    backtrace:
-      - "vcpkg/scripts/buildsystems/vcpkg.cmake:896 (_find_package)"
-      - "CMakeLists.txt:12 (find_package)"
-    name: "implot"
-    configs:
-      -
-        filename: "implotConfig.cmake"
-        kind: "cmake"
-      -
-        filename: "implot-config.cmake"
-        kind: "cmake"
-    version_request:
-      exact: false
-    settings:
-      required: "required_explicit"
-      quiet: false
-      global: false
-      policy_scope: true
-      bypass_provider: false
-      names:
-        - "implot"
-      path_suffixes:
-        - ""
-      paths:
-        CMAKE_FIND_USE_CMAKE_PATH: true
-        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-        CMAKE_FIND_USE_INSTALL_PREFIX: true
-        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
-        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
-        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
-        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
-    candidates:
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/build/CMakeFiles/pkgRedirects/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/Qt5.13.1/5.13.1/gcc_64/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/games/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/games/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/games/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/local/games/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/wsl/lib/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/usr/lib/wsl/lib/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Common Files/Oracle/Java/javapath/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/VMware/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/VMware/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/python/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/python/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/jre/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Java/jdk-17/jre/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/system32/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/system32/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/Wbem/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/Wbem/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/OpenSSH/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/WINDOWS/System32/OpenSSH/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Roaming/nvm/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Roaming/nvm/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/nodejs/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/nodejs/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Git/cmd/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Git/cmd/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/MinGW/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/MinGW/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/c/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/c/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/site/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/site/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Strawberry/perl/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/CMake/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/CMake/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Docker/Docker/resources/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Program Files/Docker/Docker/resources/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/vscode/Microsoft VS Code/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/e/vscode/Microsoft VS Code/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/snap/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/snap/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/implotConfig.cmake"
-        mode: "config"
-        reason: "no_exist"
-      -
-        path: "/opt/implot-config.cmake"
-        mode: "config"
-        reason: "no_exist"
-    found: null
-    search_context:
-      CMAKE_PREFIX_PATH:
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
-        - "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
-      ENV{PATH}:
-        - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
-        - "/opt/Qt5.13.1/5.13.1/gcc_64/bin"
-        - "/root/.cursor-server/bin/a8e95743c5268be73767c46944a71f4465d05c90/bin/remote-cli"
-        - "/usr/local/sbin"
-        - "/usr/local/bin"
-        - "/usr/sbin"
-        - "/usr/bin"
-        - "/sbin"
-        - "/bin"
-        - "/usr/games"
-        - "/usr/local/games"
-        - "/usr/lib/wsl/lib"
-        - "/mnt/c/Program Files/Common Files/Oracle/Java/javapath"
-        - "/mnt/e/VMware/bin/"
-        - "/mnt/e/python/Scripts/"
-        - "/mnt/e/python/"
-        - "/mnt/c/Program Files/Java/jdk-17/bin"
-        - "/mnt/c/Program Files/Java/jdk-17/jre/bin"
-        - "/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath"
-        - "/mnt/c/WINDOWS/system32"
-        - "/mnt/c/WINDOWS"
-        - "/mnt/c/WINDOWS/System32/Wbem"
-        - "/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/"
-        - "/mnt/c/WINDOWS/System32/OpenSSH/"
-        - "/mnt/c/Users/admin/AppData/Roaming/nvm"
-        - "/mnt/c/Program Files/nodejs"
-        - "/mnt/c/Program Files/Git/cmd"
-        - "/mnt/c/Program Files (x86)/Tencent/\u5fae\u4fe1web\u5f00\u53d1\u8005\u5de5\u5177/dll"
-        - "/mnt/e/MinGW/bin"
-        - "/mnt/e/Qt/5.14.2/mingw73_32/bin"
-        - "/mnt/e/3.3.8/bin"
-        - "/mnt/e/3.3.8/lib"
-        - "/mnt/c/Strawberry/c/bin"
-        - "/mnt/c/Strawberry/perl/site/bin"
-        - "/mnt/c/Strawberry/perl/bin"
-        - "/mnt/c/Program Files/CMake/bin"
-        - "/mnt/c/Program Files/Docker/Docker/resources/bin"
-        - "/mnt/c/Users/admin/AppData/Local/Programs/Python/Launcher/"
-        - "/mnt/c/Users/admin/AppData/Local/Microsoft/WindowsApps"
-        - "/mnt/e/vscode/Microsoft VS Code/bin"
-        - "/mnt/c/Users/admin/AppData/Roaming/nvm"
-        - "/mnt/c/Program Files/nodejs"
-        - "/mnt/c/Users/admin/AppData/Local/Programs/cursor/resources/app/bin"
-        - "/snap/bin"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-        - "/mnt/c/Users/admin/Desktop/osgerath/osgearth/vcpkg"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug"
+      CMAKE_FIND_ROOT_PATH: "/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/debug;/mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux"
 ...

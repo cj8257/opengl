@@ -140,7 +140,8 @@ CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o: \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/include/IO/ZeroMQSubscriber.h \
+ /usr/include/c++/9/atomic /usr/include/c++/9/bits/atomic_base.h \
+ /usr/include/c++/9/bits/atomic_lockfree_defines.h \
  /usr/include/c++/9/thread /usr/include/c++/9/memory \
  /usr/include/c++/9/bits/stl_tempbuf.h \
  /usr/include/c++/9/bits/stl_raw_storage_iter.h \
@@ -152,11 +153,10 @@ CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o: \
  /usr/include/c++/9/bits/refwrap.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/shared_ptr_atomic.h \
- /usr/include/c++/9/bits/atomic_base.h \
- /usr/include/c++/9/bits/atomic_lockfree_defines.h \
  /usr/include/c++/9/backward/auto_ptr.h \
  /usr/include/c++/9/pstl/glue_memory_defs.h \
- /usr/include/c++/9/pstl/execution_defs.h /usr/include/c++/9/atomic \
+ /usr/include/c++/9/pstl/execution_defs.h \
+ /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/include/IO/ZeroMQSubscriber.h \
  /usr/include/c++/9/functional /usr/include/c++/9/bits/std_function.h \
  /usr/include/c++/9/unordered_map /usr/include/c++/9/bits/hashtable.h \
  /usr/include/c++/9/bits/hashtable_policy.h \
@@ -284,4 +284,5 @@ CMakeFiles/SensorMonitor.dir/src/UI/MainController.cpp.o: \
  /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/vcpkg/installed/x64-linux/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/imgui.h \
  /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/imgui/imconfig.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
+ /mnt/c/Users/admin/Desktop/nana/SensorMonitorApp/third_party/implot/implot.h
