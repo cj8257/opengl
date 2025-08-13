@@ -9,7 +9,14 @@
 
 using json = nlohmann::json;
 
-MainController::MainController(const std::string& endpoint) : subscriber(endpoint) {}
+MainController::MainController(const std::string& host, int port) : subscriber(host, port) {
+    // Automatically start the SocketSubscriber when MainController is created
+    subscriber.start([this](const std::vector<uint8_t>& packet_data) {
+        dataManager.addBinaryPacket(packet_data);
+    });
+    dataManager.setProcessingEnabled(true);
+    running = true;
+}
 
 MainController::~MainController() {
     subscriber.stop();

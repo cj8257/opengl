@@ -54,8 +54,8 @@ int main() {
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
     // 创建主控制器实例（使用重构后的架构）
-    const std::string ADDRESS = "tcp://*:5555";
-    MainController mainController(ADDRESS);
+    
+    MainController mainController("127.0.0.1", 5555);
     
     std::cout << "SensorMonitorApp started with refactored architecture" << std::endl;
     std::cout << "Features:" << std::endl;

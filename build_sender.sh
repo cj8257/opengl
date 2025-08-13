@@ -1,1 +1,3 @@
-g++ sender.cpp -o sender -lzmq -std=c++17 -lpthread
+#!/bin/bash
+
+g++ sender_socket.cpp -o sender -std=c++17 -lstdc++fs -pthread

@@ -5,11 +5,10 @@
 #include "imgui_impl_opengl3.h"
 #include "implot.h"
 #include <iostream>
-#include <fstream>
 #include "UI/MainController.h"
 
 // GLFW错误回调函数
-static void glfw_error_callback(int error, const char* description) {
+static void glfw_error_callback(int error, const char* description) { // 
     std::cerr << "GLFW Error " << error << ": " << description << std::endl;
 }
 
@@ -50,37 +49,13 @@ int main() {
     ImPlot::CreateContext();
     
     ImGuiIO& io = ImGui::GetIO();
-    
-    // 尝试加载中文字体（如果可用的话）
-    // 注意：这需要系统中存在中文字体文件
-    // 如果没有中文字体，ImGui会使用默认字体显示英文
-    const char* font_paths[] = {
-        "C:/Windows/Fonts/msyh.ttc",  // 微软雅黑 (Windows)
-        "C:/Windows/Fonts/simhei.ttf", // 黑体 (Windows)
-        "/System/Library/Fonts/Helvetica.ttc", // macOS
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf" // Linux
-    };
-    
-    bool font_loaded = false;
-    for (const char* font_path : font_paths) {
-        if (std::ifstream(font_path).good()) {
-            io.Fonts->AddFontFromFileTTF(font_path, 18.0f, NULL, io.Fonts->GetGlyphRangesChineseFull());
-            font_loaded = true;
-            break;
-        }
-    }
-    
-    if (!font_loaded) {
-        std::cout << "No Chinese font found, using default font (English only)" << std::endl;
-    }
-    
     ImGui::StyleColorsDark();
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core");
 
     // 创建主控制器实例（使用重构后的架构）
-    const std::string ADDRESS = "tcp://*:5555";
-    MainController mainController(ADDRESS);
+    
+    MainController mainController("127.0.0.1", 5555);
     
     std::cout << "SensorMonitorApp started with refactored architecture" << std::endl;
     std::cout << "Features:" << std::endl;

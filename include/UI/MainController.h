@@ -1,11 +1,11 @@
 
 #pragma once
 #include "Core/DataManager.h"
-#include "IO/ZeroMQSubscriber.h"
+#include "IO/SocketSubscriber.h"
 
 class MainController {
 public:
-    MainController(const std::string& endpoint);
+    MainController(const std::string& host, int port);
     ~MainController();
 
     void toggle();
@@ -18,6 +18,6 @@ public:
 
 private:
     DataManager dataManager;
-    ZeroMQSubscriber subscriber;
+    SocketSubscriber subscriber;
     bool running = false;
 };
