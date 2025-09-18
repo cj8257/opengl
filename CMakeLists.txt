@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
+
+# vcpkg - 必须在project()之前设置
+set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
+
 project(SensorMonitor)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# vcpkg
-set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
 
 # Find dependencies
 find_package(glfw3 CONFIG REQUIRED)
@@ -29,10 +30,11 @@ file(GLOB IMPLOT_SOURCES "third_party/implot/*.cpp")
 file(GLOB_RECURSE GLAD_SOURCES "third_party/glad/src/*.c")
 
 add_executable(SensorMonitor
-    src/main_refactored.cpp
+    src/main.cpp
     src/Core/DataManager.cpp
     src/IO/SocketSubscriber.cpp
     src/UI/MainController.cpp
+    src/UI/impoltHeartMap.cpp
     ${IMGUI_SOURCES}
     ${IMPLOT_SOURCES}
     ${GLAD_SOURCES}

@@ -1,7 +1,9 @@
-
 #pragma once
+
 #include "Core/DataManager.h"
-#include "IO/SocketSubscriber.h"
+#include "IO/SocketSubscriber.h" // 请确保这是您订阅器类的正确路径
+#include <string>   // 1. 添加 <string> 头文件
+#include <atomic>   // 2. 添加 <atomic> 头文件
 
 class MainController {
 public:
@@ -12,12 +14,11 @@ public:
     void clear();
     void update();
     void drawUI();
-    
-    // 新增：播放控制
     void togglePlayback();
 
 private:
     DataManager dataManager;
     SocketSubscriber subscriber;
-    bool running = false;
+    std::atomic<bool> running{false}; // 3. 使用 std::atomic 保证线程安全
+    bool show_main_window = true; // 
 };

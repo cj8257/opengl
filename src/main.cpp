@@ -1,104 +1,122 @@
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
-#include "implot.h"
-#include <iostream>
-#include "UI/MainController.h"
+#include <glad/glad.h>          // 加载OpenGL函数指针的库
+#include <GLFW/glfw3.h>         // 跨平台窗口管理库
+#include "imgui.h"              // 即时模式GUI库主头文件
+#include "imgui_impl_glfw.h"    // ImGui的GLFW后端实现
+#include "imgui_impl_opengl3.h" // ImGui的OpenGL3渲染后端
+#include "implot.h"             // ImGui的绘图扩展库
+#include <iostream>             // 标准输入输出流
+#include "UI/MainController.h"  // 主控制器类
+#include "UI/impoltHeartMap.h"  // 心率图谱显示组件
 
-// GLFW错误回调函数
-static void glfw_error_callback(int error, const char* description) { // 
-    std::cerr << "GLFW Error " << error << ": " << description << std::endl;
+// GLFW错误回调函数 - 当GLFW发生错误时会调用此函数
+static void glfw_error_callback(int error, const char* description) {
+    std::cerr << "GLFW Error " << error << ": " << description << std::endl; // 输出错误信息到标准错误流
+}
+// 初始化 ImGui 和字体
+static void InitImGui(GLFWwindow* window) {
+
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+
+    // 初始化ImPlot（重构后使用ImPlot绘图库）
+    ImPlot::CreateContext(); // 创建ImPlot绘图上下文
+
+    ImGuiIO& io = ImGui::GetIO();
+    
+    // 加载中文字体（例如思源黑体）
+    ImFont* font = io.Fonts->AddFontFromFileTTF("../utils/NotoSansSC-Black.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesChineseFull());
+    IM_ASSERT(font != nullptr); // 确保字体加载成功
+    
+    ImGui::StyleColorsDark();
+    ImGui_ImplGlfw_InitForOpenGL(window, true);
+    ImGui_ImplOpenGL3_Init("#version 330 core"); // 初始化ImGui的OpenGL3后端 着色器（Shader）的目标版本是 GLSL 330
 }
 
 // 使用重构后的MainController架构的主函数
 int main() {
-    // 设置GLFW错误回调函数
+    // 设置GLFW错误回调函数 - 注册错误处理回调
     glfwSetErrorCallback(glfw_error_callback);
 
-    // 初始化GLFW库
+    // 初始化GLFW库 - 必须在使用任何GLFW功能前调用
     if (!glfwInit())
-        return -1;
+        return -1; // 如果初始化失败，返回错误码
 
     // 设置OpenGL版本参数，使用3.3核心模式
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // 设置OpenGL主版本号为3
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // 设置OpenGL次版本号为3
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 使用核心模式，去除过时功能
 
     // 创建1280x720分辨率的窗口
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "SensorMonitorApp - Refactored", NULL, NULL);
-    if (!window) {
-        glfwTerminate();
-        return -1;
+    GLFWwindow* window = glfwCreateWindow(1280, 720, "信号处理系统", NULL, NULL); // 
+    if (!window) { // 如果窗口创建失败
+        glfwTerminate(); // 清理GLFW资源
+        return -1; // 返回错误码
     }
-    glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // 开启垂直同步
+    glfwMakeContextCurrent(window); // 设置当前窗口的OpenGL上下文为活跃状态
+    glfwSwapInterval(1); // 开启垂直同步 - 限制帧率与显示器刷新率同步
 
-    // 初始化GLAD库
+    // 初始化GLAD库 - 加载OpenGL函数指针
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-        std::cerr << "Failed to initialize glad" << std::endl;
-        return -1;
+        std::cerr << "Failed to initialize glad" << std::endl; // 输出错误信息
+        return -1; // 返回错误码
     }
 
-    // 初始化ImGui
-    IMGUI_CHECKVERSION();
-    ImGui::CreateContext();
-    
-    // 初始化ImPlot（重构后使用ImPlot绘图库）
-    ImPlot::CreateContext();
-    
-    ImGuiIO& io = ImGui::GetIO();
-    ImGui::StyleColorsDark();
-    ImGui_ImplGlfw_InitForOpenGL(window, true);
-    ImGui_ImplOpenGL3_Init("#version 330 core");
-
+    InitImGui(window);
     // 创建主控制器实例（使用重构后的架构）
-    
+    // 连接到本地5555端口的socket服务器
     MainController mainController("127.0.0.1", 5555);
     
+    // 用于控制频谱图窗口显示的布尔标志
+    bool show_spectrogram = true;
+    
+    // 输出程序启动信息到控制台
     std::cout << "SensorMonitorApp started with refactored architecture" << std::endl;
     std::cout << "Features:" << std::endl;
-    std::cout << "- 128 channels @ 22.5kHz sampling rate" << std::endl;
-    std::cout << "- Binary data format support" << std::endl;
-    std::cout << "- ImPlot-based professional charts" << std::endl;
-    std::cout << "- Modular MVC architecture" << std::endl;
-    std::cout << "- Play/Pause functionality" << std::endl;
-    std::cout << "- Performance optimizations" << std::endl;
+    std::cout << "- 128 channels @ 22.5kHz sampling rate" << std::endl; // 128通道22.5kHz采样率
+    std::cout << "- Binary data format support" << std::endl; // 支持二进制数据格式
+    std::cout << "- ImPlot-based professional charts" << std::endl; // 基于ImPlot的专业图表
+    std::cout << "- Modular MVC architecture" << std::endl; // 模块化MVC架构
+    std::cout << "- Play/Pause functionality" << std::endl; // 播放/暂停功能
+    std::cout << "- Performance optimizations" << std::endl; // 性能优化
 
-    // 主程序循环
+    // 主程序循环 - 持续运行直到用户关闭窗口
     while (!glfwWindowShouldClose(window)) {
-        // 处理GLFW事件
+        // 处理GLFW事件 - 处理键盘、鼠标等输入事件
         glfwPollEvents();
 
         // 开始新的ImGui帧
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
+        ImGui_ImplOpenGL3_NewFrame(); // 开始OpenGL渲染后端的新帧
+        ImGui_ImplGlfw_NewFrame();    // 开始GLFW输入后端的新帧
+        ImGui::NewFrame();            // 开始ImGui的新帧
+        
         // 使用MainController绘制UI（模块化架构）
-        mainController.drawUI();
+        mainController.drawUI(); // 调用主控制器的UI绘制方法
+        
+        // 直接显示频谱图窗口
+        if (show_spectrogram) { // 如果频谱图窗口开关为true
+            ShowSpectrogramWindow(&show_spectrogram); // 显示频谱图窗口
+        }
 
         // 渲染
-        ImGui::Render();
-        int display_w, display_h;
-        glfwGetFramebufferSize(window, &display_w, &display_h);
-        glViewport(0, 0, display_w, display_h);
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
-        glClear(GL_COLOR_BUFFER_BIT);
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-        glfwSwapBuffers(window);
+        ImGui::Render(); // 结束ImGui帧并准备渲染数据
+        int display_w, display_h; // 声明显示区域宽高变量
+        glfwGetFramebufferSize(window, &display_w, &display_h); // 获取窗口帧缓冲区大小
+        glViewport(0, 0, display_w, display_h); // 设置OpenGL视口大小
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f); // 设置清屏颜色为深灰色
+        glClear(GL_COLOR_BUFFER_BIT); // 清除颜色缓冲区
+        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData()); // 渲染ImGui绘制数据
+        glfwSwapBuffers(window); // 交换前后缓冲区，显示渲染结果
     }
 
     // 清理资源
-    ImPlot::DestroyContext();
-    ImGui_ImplOpenGL3_Shutdown();
-    ImGui_ImplGlfw_Shutdown();
-    ImGui::DestroyContext();
+    ImPlot::DestroyContext();        // 销毁ImPlot上下文
+    ImGui_ImplOpenGL3_Shutdown();    // 关闭ImGui OpenGL后端
+    ImGui_ImplGlfw_Shutdown();       // 关闭ImGui GLFW后端
+    ImGui::DestroyContext();         // 销毁ImGui上下文
 
-    glfwDestroyWindow(window);
-    glfwTerminate();
+    glfwDestroyWindow(window); // 销毁GLFW窗口
+    glfwTerminate();          // 清理GLFW库资源
 
-    std::cout << "SensorMonitorApp shutdown completed" << std::endl;
-    return 0;
+    std::cout << "SensorMonitorApp shutdown completed" << std::endl; // 输出程序关闭完成信息
+    return 0; // 程序正常退出
 }

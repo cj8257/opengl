@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wget:*)",
+      "Bash(vcpkg install:*)",
+      "Bash(./bootstrap-vcpkg.sh:*)",
+      "Bash(./vcpkg install:*)",
+      "Bash(./vcpkg.exe install:*)",
+      "Bash(cmake:*)",
+      "Bash(./vcpkg/vcpkg:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": []
+  }
+}
