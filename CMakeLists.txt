@@ -34,7 +34,9 @@ add_executable(SensorMonitor
     src/Core/DataManager.cpp
     src/IO/SocketSubscriber.cpp
     src/UI/MainController.cpp
+    src/UI/FrameController.cpp
     src/UI/impoltHeartMap.cpp
+    src/UI/SystemControl.cpp
     ${IMGUI_SOURCES}
     ${IMPLOT_SOURCES}
     ${GLAD_SOURCES}

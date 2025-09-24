@@ -146,29 +146,30 @@ void ShowSpectrogramWindow(bool* p_open) {
     // 更新动画数据
     UpdateSpectrogramData(delta_time);
 
-    // 设置窗口初始大小
-    ImGui::SetNextWindowSize(ImVec2(600, 450), ImGuiCond_FirstUseEver);
-    if (!ImGui::Begin("时方图", p_open)) {  // 创建窗口
+    // 设置窗口固定位置和大小，禁止拖动
+    ImGui::SetNextWindowPos(ImVec2(20, 20), ImGuiCond_Always);      // 固定位置在(50,50)
+    ImGui::SetNextWindowSize(ImVec2(800, 800), ImGuiCond_Always);   // 固定大小
+    if (!ImGui::Begin("时方图", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize| ImGuiWindowFlags_NoCollapse)) {  // 创建窗口，禁止移动和调整大小
         ImGui::End();                         // 如果窗口未打开，结束绘制
         return;
     }
 
-    // --- 用户界面部分 ---
-    ImGui::Text("Real-time Angular-Time Spectrogram");       // 标题文本
-    ImGui::Text("X-axis: Angle (0-360°), Y-axis: Time (HH:MM:SS), Color: Signal Intensity");  //坐标轴说明
+    // // --- 用户界面部分 ---
+    // ImGui::Text("Real-time Angular-Time Spectrogram");       // 标题文本
+    // ImGui::Text("X-axis: Angle (0-360°), Y-axis: Time (HH:MM:SS), Color: Signal Intensity");  //坐标轴说明
 
-    // 控制按钮区域
-    ImGui::Separator();                       // 分割线
-    if (ImGui::Button(is_playing ? "暂停" : "播放")) {  // 播放/暂停按钮
-        is_playing = !is_playing;             // 切换播放状态
-    }
-    ImGui::SameLine();                        // 同一行显示
-    ImGui::SliderFloat("速度", &animation_speed, 0.1f, 5.0f, "%.1fx");  // 速度滑块
-    char buffer[128] = "";
-if (ImGui::InputText("Name", buffer, sizeof(buffer))) {
-    // 输入内容改变时执行
-    ImGui::Text("You entered: %s", buffer);
-}
+    // // 控制按钮区域
+    // ImGui::Separator();                       // 分割线
+    // if (ImGui::Button(is_playing ? "暂停" : "播放")) {  // 播放/暂停按钮
+    //     is_playing = !is_playing;             // 切换播放状态
+    // }
+    // ImGui::SameLine();                        // 同一行显示
+    // ImGui::SliderFloat("速度", &animation_speed, 0.1f, 5.0f, "%.1fx");  // 速度滑块
+//     char buffer[128] = "";
+// if (ImGui::InputText("Name", buffer, sizeof(buffer))) {
+//     // 输入内容改变时执行
+//     ImGui::Text("You entered: %s", buffer);
+// }
     // 显示数据统计信息
     if (!spectrogram_data.empty()) {          // 如果数据非空
         double min_val = *std::min_element(spectrogram_data.begin(), spectrogram_data.end());  //最小值

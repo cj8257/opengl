@@ -29,7 +29,7 @@ public:
     // 显示参数控制
     void setUpdateRate(int fps);
     void setDisplayPoints(size_t points);
-
+    void setChartType(const std::string& new_type);
 private:
     // 处理线程主循环
     void processDataLoop();
@@ -73,4 +73,6 @@ private:
     // 显示控制参数
     std::atomic<int> m_updateFps{30};          // 目标更新帧率
     std::atomic<size_t> m_targetDisplayPoints{1000}; // 目标显示点数
+    std::string m_type{""}; // 图表类型。注意：空字符串是 "" 而不是 ''
+    mutable std::mutex m_type_mutex; // 用于保护 m_type 的互斥锁
 };

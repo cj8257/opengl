@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# 获取 AppImage 目录
+HERE="$(dirname "$(readlink -f "${0}")")"
+
+# 设置库路径
+export LD_LIBRARY_PATH="$HERE/usr/lib:$HERE/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
+
+# 设置字体路径
+export FONTCONFIG_PATH="$HERE/usr/share/fonts"
+
+# 进入应用目录
+cd "$HERE"
+
+# 运行程序
+exec "$HERE/usr/bin/SensorMonitor" "$@"

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=SensorMonitor
+Comment=Real-time sensor data monitoring application
+Icon=SensorMonitor
+Exec=SensorMonitor
+Categories=Development;Science;
+Terminal=false

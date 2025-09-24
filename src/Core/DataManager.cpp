@@ -79,6 +79,11 @@ void DataManager::processDataLoop() {
 
 // 更新显示数据的方法 - 将原始数据降采样并准备显示
 void DataManager::updateDisplayData() {
+    std::string current_chart_type;
+    {
+        std::lock_guard<std::mutex> lock(m_type_mutex);
+        current_chart_type = m_type;
+    }
     // 智能降采样：根据目标显示点数动态调整
     size_t target_points = m_targetDisplayPoints.load();                      // 获取目标显示点数
     target_points = std::clamp(target_points, MIN_DISPLAY_POINTS, MAX_DISPLAY_POINTS); // 将目标点数限制在有效范围内
@@ -133,15 +138,24 @@ void DataManager::updateDisplayData() {
     m_backTimeValues.clear();                                               // 清空后台时间值向量
     m_backTimeValues.reserve(display_points);                               // 预分配内存空间
 
-    // 估算起始样本索引（确保时间连续）
-    const size_t raw_points_count = m_rawChannelData[0].size();            // 获取原始数据点数
-    const size_t start_sample_index = m_totalSamplesReceived > raw_points_count ? (m_totalSamplesReceived - raw_points_count) : 0; // 计算起始样本索引
+       // 根据图表类型决定X轴的数据
+       if (current_chart_type == "putu") {
+        // "谱图"模式：X轴为数据点索引 (0, 1, 2, ...)
+        for (size_t i = 0; i < display_points; ++i) {
+            m_backTimeValues.push_back(static_cast<float>(i));
+        }
+    } else { // 默认为"shitu" (时图) 或其他任何类型
+        // "时图"模式：X轴为真实时间（秒）
+        // 估算起始样本索引（确保时间连续）
+        const size_t raw_points_count = m_rawChannelData[0].size();     // 获取原始数据点数
+        const size_t start_sample_index = m_totalSamplesReceived > raw_points_count ? (m_totalSamplesReceived - raw_points_count) : 0; // 计算起始样本索引
 
-    for (size_t i = 0; i < display_points; ++i) {                         // 遍历每个显示点
-        double ratio = display_points > 1 ? static_cast<double>(i) / (display_points - 1) : 0.0; // 计算当前点在显示序列中的比例
-        size_t original_index = static_cast<size_t>(ratio * (raw_points_count > 0 ? raw_points_count - 1 : 0)); // 计算对应的原始数据索引
-        double t = (start_sample_index + original_index) / SAMPLE_RATE;     // 计算对应的时间值（秒）
-        m_backTimeValues.push_back(static_cast<float>(t));                  // 将时间值添加到后台时间向量
+        for (size_t i = 0; i < display_points; ++i) {                    // 遍历每个显示点
+            double ratio = display_points > 1 ? static_cast<double>(i) / (display_points - 1) : 0.0; // 计算当前点在显示序列中的比例
+            size_t original_index = static_cast<size_t>(ratio * (raw_points_count > 0 ? raw_points_count - 1 : 0)); // 计算对应的原始数据索引
+            double t = (start_sample_index + original_index) / SAMPLE_RATE;     // 计算对应的时间值（秒）
+            m_backTimeValues.push_back(static_cast<float>(t));              // 将时间值添加到后台时间向量
+        }
     }
 
     // 交换前后缓冲（一次锁）
@@ -191,3 +205,12 @@ void DataManager::setUpdateRate(int fps) {
 void DataManager::setDisplayPoints(size_t points) { 
     m_targetDisplayPoints = std::clamp(points, MIN_DISPLAY_POINTS, MAX_DISPLAY_POINTS); // 将显示点数限制在有效范围内
 }
+// 设置横轴数据类型
+void DataManager::setChartType(const std::string& new_type) {
+    // 创建一个 lock_guard，它在构造时自动锁定 m_type_mutex
+    std::lock_guard<std::mutex> lock(m_type_mutex);
+    
+    // 在锁的保护下，安全地修改 m_type
+    m_type = new_type;
+    
+} // 当函数结束时，lock 对象被销毁，自动解锁 m_type_mutex

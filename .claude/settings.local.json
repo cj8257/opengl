@@ -9,7 +9,9 @@
       "Bash(cmake:*)",
       "Bash(./vcpkg/vcpkg:*)",
       "Bash(rm:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(make:*)",
+      "Bash(chmod:*)"
     ],
     "deny": []
   }

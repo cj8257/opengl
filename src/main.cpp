@@ -6,7 +6,9 @@
 #include "implot.h"             // ImGui的绘图扩展库
 #include <iostream>             // 标准输入输出流
 #include "UI/MainController.h"  // 主控制器类
+#include "UI/FrameController.h" // 帧数据控制器类
 #include "UI/impoltHeartMap.h"  // 心率图谱显示组件
+#include "UI/SystemControl.h"   // 系统控制组件
 
 // GLFW错误回调函数 - 当GLFW发生错误时会调用此函数
 static void glfw_error_callback(int error, const char* description) {
@@ -40,14 +42,30 @@ int main() {
     // 初始化GLFW库 - 必须在使用任何GLFW功能前调用
     if (!glfwInit())
         return -1; // 如果初始化失败，返回错误码
-
+        // 2. 获取主监视器
+        GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+        if (!monitor)
+        {
+            std::cerr << "Failed to get the primary monitor" << std::endl;
+            glfwTerminate();
+            return -1;
+        }
+    
+        // 3. 获取主监视器的当前视频模式
+        const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+        if (!mode)
+        {
+            std::cerr << "Failed to get the video mode of the monitor" << std::endl;
+            glfwTerminate();
+            return -1;
+        }
     // 设置OpenGL版本参数，使用3.3核心模式
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // 设置OpenGL主版本号为3
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3); // 设置OpenGL次版本号为3
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 使用核心模式，去除过时功能
 
     // 创建1280x720分辨率的窗口
-    GLFWwindow* window = glfwCreateWindow(1280, 720, "信号处理系统", NULL, NULL); // 
+    GLFWwindow* window = glfwCreateWindow(mode->width, mode->height, "信号处理系统", NULL, NULL); // 
     if (!window) { // 如果窗口创建失败
         glfwTerminate(); // 清理GLFW资源
         return -1; // 返回错误码
@@ -64,7 +82,14 @@ int main() {
     InitImGui(window);
     // 创建主控制器实例（使用重构后的架构）
     // 连接到本地5555端口的socket服务器
-    MainController mainController("127.0.0.1", 5555);
+    // MainController mainController("127.0.0.1", 5555);
+
+    // 创建帧数据控制器实例
+    FrameController frameController1("127.0.0.1", 5555);  // 主控制器，处理网络连接
+    FrameController frameController2(frameController1.getDataManager());  // 共享数据的控制器
+
+    // 创建系统控制组件实例
+    SystemControl systemControl;
     
     // 用于控制频谱图窗口显示的布尔标志
     bool show_spectrogram = true;
@@ -90,7 +115,19 @@ int main() {
         ImGui::NewFrame();            // 开始ImGui的新帧
         
         // 使用MainController绘制UI（模块化架构）
-        mainController.drawUI(); // 调用主控制器的UI绘制方法
+        // mainController.drawUI(); // 调用主控制器的UI绘制方法
+
+        // 使用FrameController绘制帧数据快照UI
+        frameController1.drawUI(870, 20, 600, 500,"谱图1"); // 调用帧控制器的UI绘制方法
+
+         // 使用FrameController绘制帧数据快照UI
+         frameController2.drawUI(870, 550, 600, 500,"谱图2"); // 调用帧控制器的UI绘制方法
+
+        // 绘制系统控制按钮（右上角的三个按钮）
+        systemControl.drawControlButtons();
+
+        // 绘制系统参数配置窗口（如果需要显示）
+        systemControl.drawSystemConfigWindow();
         
         // 直接显示频谱图窗口
         if (show_spectrogram) { // 如果频谱图窗口开关为true

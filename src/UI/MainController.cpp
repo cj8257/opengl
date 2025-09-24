@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <cstdio>
-
+#include <iostream>
 // MainController类的构造函数 - 初始化主控制器并启动数据订阅
 MainController::MainController(const std::string& host, int port)
     : subscriber(host, port) // 初始化列表：构造SocketSubscriber对象
@@ -19,19 +19,6 @@ MainController::MainController(const std::string& host, int port)
 // MainController类的析构函数 - 停止订阅器并清理资源
 MainController::~MainController() {
     subscriber.stop();
-}
-
-// 切换运行状态的方法 - 在启动和停止之间切换
-void MainController::toggle() {
-    if (running) {
-        subscriber.stop();
-        running = false;
-    } else {
-        subscriber.start([this](const std::vector<uint8_t>& packet_data) {
-            dataManager.addBinaryPacket(packet_data);
-        });
-        running = true;
-    }
 }
 
 // 清除所有数据的方法 - 清空数据管理器中的所有数据
@@ -51,36 +38,21 @@ void MainController::update() {
 
 // 绘制用户界面的方法 - 包含了所有修复的最终版本
 void MainController::drawUI() {
-    // 1. 设置窗口的初始大小
-    ImGui::SetNextWindowSize(ImVec2(600, 500), ImGuiCond_FirstUseEver);
+    // 1. 设置窗口的固定位置和大小，禁止拖动
+    ImGui::SetNextWindowPos(ImVec2(670, 50), ImGuiCond_Always);      // 固定位置在(670,50)
+    ImGui::SetNextWindowSize(ImVec2(600, 500), ImGuiCond_Always);    // 固定大小
 
-    // 2. 创建一个标准的ImGui窗口作为所有控件的“容器”
-    if (!ImGui::Begin("时域信号处理窗口", &show_main_window)) {
+    // 2. 创建一个标准的ImGui窗口作为所有控件的"容器"，禁止移动和调整大小
+    if (!ImGui::Begin("时域信号处理窗口", &show_main_window, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize)) {
         // 如果用户关闭了这个窗口, Begin会返回false, 我们必须调用End并提前返回
         ImGui::End();
         return;
     }
 
     // --- 从这里开始，所有的UI控件都安全地放在这个窗口里 ---
-
-    // 3. 控制按钮和状态文本
-    if (ImGui::Button(running ? "停止" : "开始", ImVec2(80, 30))) toggle();
-    ImGui::SameLine();
-    if (ImGui::Button(dataManager.isPlaying() ? "暂停" : "播放", ImVec2(80, 30))) {
-        togglePlayback();
-    }
-    ImGui::SameLine();
-    if (ImGui::Button("清除", ImVec2(80, 30))) clear();
-    ImGui::SameLine();
-    ImGui::Text("状态: %s | %s",
-              running ? "开始" : "停止",
-              dataManager.isPlaying() ? "播放" : "暂停");
-
-    ImGui::Separator();
-
     // 4. 使用回调安全地访问和显示数据
     dataManager.accessDisplayData([&](const std::vector<std::vector<float>>& display_data, const std::vector<float>& time_data) {
-        
+
         // --- 控制面板部分 ---
         static int display_channels = 8;
         static bool auto_scale = true;
