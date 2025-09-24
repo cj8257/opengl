@@ -138,72 +138,84 @@ void ShowSpectrogramWindow(bool* p_open) {
     InitializeSpectrogramData();
 
     // 计算帧间时间差
-    static float last_time = 0.0f;            // 上一帧时间
-    float current_time = ImGui::GetTime();    // 当前帧时间
-    float delta_time = current_time - last_time;  // 时间差
-    last_time = current_time;                 // 更新上一帧时间
+    static float last_time = 0.0f;
+    float current_time = ImGui::GetTime();
+    float delta_time = current_time - last_time;
+    last_time = current_time;
 
     // 更新动画数据
     UpdateSpectrogramData(delta_time);
 
-    // 设置窗口固定位置和大小，禁止拖动
-    ImGui::SetNextWindowPos(ImVec2(20, 20), ImGuiCond_Always);      // 固定位置在(50,50)
-    ImGui::SetNextWindowSize(ImVec2(800, 800), ImGuiCond_Always);   // 固定大小
-    if (!ImGui::Begin("时方图", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize| ImGuiWindowFlags_NoCollapse)) {  // 创建窗口，禁止移动和调整大小
-        ImGui::End();                         // 如果窗口未打开，结束绘制
+    // 设置现代窗口样式
+    ImGui::SetNextWindowPos(ImVec2(20, 110), ImGuiCond_Always);
+    ImGui::SetNextWindowSize(ImVec2(860, 940), ImGuiCond_Always);
+
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(16.0f, 12.0f));
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 8.0f);
+    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.08f, 0.08f, 0.10f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.20f, 0.24f, 0.32f, 1.0f));
+
+    if (!ImGui::Begin("时方图 (Time-Frequency Plot)", NULL,
+        ImGuiWindowFlags_NoMove |
+        ImGuiWindowFlags_NoResize |
+        ImGuiWindowFlags_NoCollapse)) {
+        ImGui::PopStyleColor(2);
+        ImGui::PopStyleVar(2);
+        ImGui::End();
         return;
     }
 
-    // // --- 用户界面部分 ---
-    // ImGui::Text("Real-time Angular-Time Spectrogram");       // 标题文本
-    // ImGui::Text("X-axis: Angle (0-360°), Y-axis: Time (HH:MM:SS), Color: Signal Intensity");  //坐标轴说明
+    // 显示数据统计信息 - 现代化样式
+    if (!spectrogram_data.empty()) {
+        double min_val = *std::min_element(spectrogram_data.begin(), spectrogram_data.end());
+        double max_val = *std::max_element(spectrogram_data.begin(), spectrogram_data.end());
 
-    // // 控制按钮区域
-    // ImGui::Separator();                       // 分割线
-    // if (ImGui::Button(is_playing ? "暂停" : "播放")) {  // 播放/暂停按钮
-    //     is_playing = !is_playing;             // 切换播放状态
-    // }
-    // ImGui::SameLine();                        // 同一行显示
-    // ImGui::SliderFloat("速度", &animation_speed, 0.1f, 5.0f, "%.1fx");  // 速度滑块
-//     char buffer[128] = "";
-// if (ImGui::InputText("Name", buffer, sizeof(buffer))) {
-//     // 输入内容改变时执行
-//     ImGui::Text("You entered: %s", buffer);
-// }
-    // 显示数据统计信息
-    if (!spectrogram_data.empty()) {          // 如果数据非空
-        double min_val = *std::min_element(spectrogram_data.begin(), spectrogram_data.end());  //最小值
-        double max_val = *std::max_element(spectrogram_data.begin(), spectrogram_data.end());  //最大值
-        ImGui::Text("Data range: %.3f to %.3f", min_val, max_val);  // 显示数据范围
-        ImGui::Text("Animation time: %.1f", animation_time);         // 显示动画时间
-        ImGui::Text("Current time: %s", FormatTime(time_axis_offset + TIME_SLICES).c_str());  //显示当前时间
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.80f, 0.85f, 0.90f, 1.0f));
+        ImGui::Text("数据范围: %.3f to %.3f", min_val, max_val);
+        ImGui::Text("当前时间: %s", FormatTime(time_axis_offset + TIME_SLICES).c_str());
+
+        // 添加状态指示器
+        ImGui::SameLine();
+        ImGui::Text("● 状态: ");
+        ImGui::SameLine();
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.20f, 0.80f, 0.30f, 1.0f));
+        ImGui::Text("运行中");
+        ImGui::PopStyleColor(1);
+        ImGui::PopStyleColor(1);
     }
 
-    // --- 热力图绘制部分 ---
-    ImPlot::PushColormap(ImPlotColormap_Viridis);  // 设置科学可视化颜色映射
+    ImGui::Spacing();
 
-    // 开始绘制区域
-    if (ImPlot::BeginPlot("##AngularTimeHeatmap", ImVec2(-1, -1), ImPlotFlags_NoLegend)) {
+    // 使用蓝色色彩映射以匹配设计
+    ImPlot::PushColormap(ImPlotColormap_Cool); // 使用冷色调色彩映射
 
-        // 设置坐标轴标签
-        ImPlot::SetupAxes("角度", "时间");  // X轴：角度，Y轴：时间
+    // 计算剩余空间给热力图使用
+    float remaining_height = ImGui::GetContentRegionAvail().y;
+
+    // 开始绘制现代化热力图 - 使用剩余的全部高度
+    ImPlot::PushStyleColor(ImPlotCol_PlotBg, ImVec4(0.05f, 0.06f, 0.08f, 1.0f));
+    if (ImPlot::BeginPlot("##TimeFrequencyHeatmap", ImVec2(-1, remaining_height),
+        ImPlotFlags_NoLegend | ImPlotFlags_NoMenus | ImPlotFlags_NoTitle)) {
+
+        // 设置坐标轴标签 - 现代化风格
+        ImPlot::SetupAxes("角度", "时间");
 
         // 计算时间轴范围（实现滚动效果）
-        float time_min = time_axis_offset;             // 时间轴最小值（秒）
-        float time_max = time_axis_offset + TIME_SLICES;  // 时间轴最大值（秒）
+        float time_min = time_axis_offset;
+        float time_max = time_axis_offset + TIME_SLICES;
 
         // 设置坐标轴范围
         ImPlot::SetupAxesLimits(0, 360, time_max, time_min, ImGuiCond_Always);
 
-        // 设置Y轴（时间轴）的自定义格式化器 - 修正的函数调用
+        // 设置Y轴（时间轴）的自定义格式化器
         ImPlot::SetupAxisFormat(ImAxis_Y1, TimeFormatterCallback);
 
-        // 绘制热力图
+        // 绘制热力图 - 使用蓝色渐变
         ImPlot::PlotHeatmap(
-            "Angular Spectrogram",      // 图例标识
-            spectrogram_data.data(),    // 数据指针
-            TIME_SLICES,                // 行数（时间维度）
-            ANGLE_BINS,                 // 列数（角度维度）
+            "Angular Spectrogram",
+            spectrogram_data.data(),
+            TIME_SLICES,
+            ANGLE_BINS,
             0.0,                        // 颜色映射最小值
             2.0,                        // 颜色映射最大值
             NULL,                       // 标签格式（使用默认）
@@ -211,10 +223,13 @@ void ShowSpectrogramWindow(bool* p_open) {
             ImPlotPoint(360, time_min)  // 热力图结束点坐标
         );
 
-        ImPlot::EndPlot();              // 结束绘制区域
+        ImPlot::EndPlot();
     }
+    ImPlot::PopStyleColor(1);
 
-    ImPlot::PopColormap();              // 恢复默认颜色映射
+    ImPlot::PopColormap();
 
-    ImGui::End();                       // 结束窗口绘制
+    ImGui::PopStyleColor(2);
+    ImGui::PopStyleVar(2);
+    ImGui::End();
 }

@@ -29,7 +29,61 @@ static void InitImGui(GLFWwindow* window) {
     ImFont* font = io.Fonts->AddFontFromFileTTF("../utils/NotoSansSC-Black.ttf", 18.0f, nullptr, io.Fonts->GetGlyphRangesChineseFull());
     IM_ASSERT(font != nullptr); // 确保字体加载成功
     
+    // 设置现代深色主题风格，匹配页面设计
     ImGui::StyleColorsDark();
+
+    // 自定义颜色方案以匹配设计图
+    ImGuiStyle& style = ImGui::GetStyle();
+    ImVec4* colors = style.Colors;
+
+    // 主要背景色 - 深黑色
+    colors[ImGuiCol_WindowBg] = ImVec4(0.08f, 0.08f, 0.10f, 1.00f);
+    colors[ImGuiCol_ChildBg] = ImVec4(0.10f, 0.10f, 0.12f, 1.00f);
+    colors[ImGuiCol_PopupBg] = ImVec4(0.08f, 0.08f, 0.10f, 1.00f);
+
+    // 边框和分割线
+    colors[ImGuiCol_Border] = ImVec4(0.20f, 0.24f, 0.32f, 1.00f);
+    colors[ImGuiCol_BorderShadow] = ImVec4(0.00f, 0.00f, 0.00f, 0.00f);
+    colors[ImGuiCol_Separator] = ImVec4(0.20f, 0.24f, 0.32f, 1.00f);
+
+    // 按钮样式 - 蓝色主题
+    colors[ImGuiCol_Button] = ImVec4(0.20f, 0.50f, 0.90f, 1.00f);        // 蓝色按钮
+    colors[ImGuiCol_ButtonHovered] = ImVec4(0.30f, 0.60f, 1.00f, 1.00f); // 悬停时更亮
+    colors[ImGuiCol_ButtonActive] = ImVec4(0.15f, 0.40f, 0.80f, 1.00f);  // 按下时更暗
+
+    // 框架和滑块
+    colors[ImGuiCol_FrameBg] = ImVec4(0.15f, 0.18f, 0.22f, 1.00f);
+    colors[ImGuiCol_FrameBgHovered] = ImVec4(0.20f, 0.24f, 0.30f, 1.00f);
+    colors[ImGuiCol_FrameBgActive] = ImVec4(0.25f, 0.30f, 0.38f, 1.00f);
+
+    // 滑块把手
+    colors[ImGuiCol_SliderGrab] = ImVec4(0.20f, 0.50f, 0.90f, 1.00f);
+    colors[ImGuiCol_SliderGrabActive] = ImVec4(0.30f, 0.60f, 1.00f, 1.00f);
+
+    // 复选框
+    colors[ImGuiCol_CheckMark] = ImVec4(0.30f, 0.60f, 1.00f, 1.00f);
+
+    // 标题栏
+    colors[ImGuiCol_TitleBg] = ImVec4(0.08f, 0.08f, 0.10f, 1.00f);
+    colors[ImGuiCol_TitleBgActive] = ImVec4(0.12f, 0.15f, 0.20f, 1.00f);
+    colors[ImGuiCol_TitleBgCollapsed] = ImVec4(0.08f, 0.08f, 0.10f, 1.00f);
+
+    // 文本颜色
+    colors[ImGuiCol_Text] = ImVec4(0.90f, 0.90f, 0.95f, 1.00f);
+    colors[ImGuiCol_TextDisabled] = ImVec4(0.50f, 0.50f, 0.55f, 1.00f);
+
+    // 设置圆角和间距
+    style.WindowRounding = 8.0f;
+    style.FrameRounding = 6.0f;
+    style.PopupRounding = 6.0f;
+    style.ScrollbarRounding = 8.0f;
+    style.GrabRounding = 4.0f;
+    style.TabRounding = 6.0f;
+    style.WindowPadding = ImVec2(12.0f, 12.0f);
+    style.FramePadding = ImVec2(8.0f, 4.0f);
+    style.ItemSpacing = ImVec2(8.0f, 6.0f);
+    style.ItemInnerSpacing = ImVec2(6.0f, 4.0f);
+    style.IndentSpacing = 20.0f;
     ImGui_ImplGlfw_InitForOpenGL(window, true);
     ImGui_ImplOpenGL3_Init("#version 330 core"); // 初始化ImGui的OpenGL3后端 着色器（Shader）的目标版本是 GLSL 330
 }
@@ -118,10 +172,10 @@ int main() {
         // mainController.drawUI(); // 调用主控制器的UI绘制方法
 
         // 使用FrameController绘制帧数据快照UI
-        frameController1.drawUI(870, 20, 600, 500,"谱图1"); // 调用帧控制器的UI绘制方法
+        frameController1.drawUI(900, 110, 1000, 460,"谱图1"); // 调用帧控制器的UI绘制方法
 
          // 使用FrameController绘制帧数据快照UI
-         frameController2.drawUI(870, 550, 600, 500,"谱图2"); // 调用帧控制器的UI绘制方法
+         frameController2.drawUI(900, 590, 1000, 460,"谱图2"); // 调用帧控制器的UI绘制方法
 
         // 绘制系统控制按钮（右上角的三个按钮）
         systemControl.drawControlButtons();

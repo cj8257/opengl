@@ -59,148 +59,139 @@ void FrameController::update() {
 // 绘制用户界面的方法 - 显示当前帧数据的快照图表
 void FrameController::drawUI(const int x, int y, int height, int width,const std::string& name){
     // 1. 设置窗口的固定位置和大小，禁止拖动
-    ImGui::SetNextWindowPos(ImVec2(x, y), ImGuiCond_Always);      // 固定位置在(50,50)
-    ImGui::SetNextWindowSize(ImVec2(height, width), ImGuiCond_Always);    // 固定大小
+    ImGui::SetNextWindowPos(ImVec2(x, y), ImGuiCond_Always);
+    ImGui::SetNextWindowSize(ImVec2(height, width), ImGuiCond_Always);
 
-    // 2. 创建一个标准的ImGui窗口作为所有控件的"容器"，禁止移动和调整大小
-    if (!ImGui::Begin(name.c_str(), NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoResize| ImGuiWindowFlags_NoCollapse )) {
-        // 如果用户关闭了这个窗口, Begin会返回false, 我们必须调用End并提前返回
+    // 设置现代窗口样式
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(16.0f, 12.0f));
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 8.0f);
+    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.12f, 0.14f, 0.18f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0.25f, 0.30f, 0.38f, 1.0f));
+
+    // 2. 创建现代风格的窗口
+    if (!ImGui::Begin(name.c_str(), NULL,
+        ImGuiWindowFlags_NoMove |
+        ImGuiWindowFlags_NoResize |
+        ImGuiWindowFlags_NoCollapse)) {
+        ImGui::PopStyleColor(2);
+        ImGui::PopStyleVar(2);
         ImGui::End();
         return;
     }
 
-    // --- 从这里开始，所有的UI控件都安全地放在这个窗口里 ---
-    // 4. 使用回调安全地访问和显示数据
+    // 使用回调安全地访问和显示数据
     dataManager->accessDisplayData([&](const std::vector<std::vector<float>>& display_data, const std::vector<float>& time_data) {
 
+        // 现代化的控制面板
+        ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(8.0f, 6.0f));
+        ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(8.0f, 6.0f));
 
-                // std::cout << "--- Printing display_data (range-based for) ---" << std::endl;
-        // 安全检查：确保 display_data 不是空的
-// if (!display_data.empty()) {
-//     const auto& first_row = display_data[0]; // 创建一个引用，让代码更清晰
-
-//     // 计算要打印的元素数量：取 10 和数组实际大小中较小的一个
-//     size_t items_to_print = std::min(10, (int)first_row.size());
-
-//     std::cout << "第一行数据的前 " << items_to_print << " 项: [ ";
-//     for (size_t i = 0; i < items_to_print; ++i) {
-//         std::cout << first_row[i] << " ";
-//     }
-//     std::cout << "]" << std::endl;
-//     std::cout << "第二行数据的前 " << items_to_print << " 项: [ ";
-//     for (size_t i = 0; i < items_to_print; ++i) {
-//         std::cout << time_data[i] << " ";
-//     }
-//     std::cout << "]" << std::endl;
-
-// } else {
-//     std::cout << "display_data 是空的。" << std::endl;
-// }
-        // std::cout << "--------------------------------------------" << std::endl;
-        // --- 控制面板部分 ---
-        ImGui::Text("通道选择:");
+        // 通道选择区域
+        ImGui::Text("通道:");
         ImGui::SameLine();
-        ImGui::SetNextItemWidth(100);
+        ImGui::SetNextItemWidth(60);
 
-        // 为每个FrameController实例创建唯一的控件ID
         std::string channel_id = "##channel_" + name;
-        std::string button_id = "确定##" + name;
-        std::string scale_id = "自动缩放##" + name;
-        std::string reset_id = "重置缩放##" + name;
-
         ImGui::InputInt(channel_id.c_str(), &selected_channel);
+
         ImGui::SameLine();
-        if (ImGui::Button(button_id.c_str())) {
-            // 确保通道号在有效范围内
+
+        // 现代化按钮样式
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.20f, 0.50f, 0.90f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.30f, 0.60f, 1.00f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.15f, 0.40f, 0.80f, 1.0f));
+        if (ImGui::Button("确定")) {
             selected_channel = std::max(0, std::min(selected_channel, static_cast<int>(display_data.size()) - 1));
         }
-        ImGui::SameLine();
-        ImGui::Text("(范围: 0-%d)", static_cast<int>(display_data.size()) - 1);
+        ImGui::PopStyleColor(3);
 
-        ImGui::Checkbox(scale_id.c_str(), &auto_scale);
         ImGui::SameLine();
-        if (ImGui::Button(reset_id.c_str())) {
+
+        // 自动缩放开关 - 现代化样式
+        std::string scale_id = "自动缩放##" + name;
+        ImGui::Checkbox(scale_id.c_str(), &auto_scale);
+
+        ImGui::SameLine();
+
+        // 重置按钮
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.35f, 0.40f, 0.50f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.45f, 0.50f, 0.60f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.25f, 0.30f, 0.40f, 1.0f));
+        if (ImGui::Button("重置")) {
             reset_zoom = true;
         }
+        ImGui::PopStyleColor(3);
 
+        ImGui::PopStyleVar(2);
+
+        // 添加分隔线
         ImGui::Separator();
 
-        // 5. 开始绘制ImPlot图表，让它填满窗口的剩余空间
-        if (ImPlot::BeginPlot("图表", ImVec2(-1, -1))) {
+        // 计算剩余空间给图表使用
+        float remaining_height = ImGui::GetContentRegionAvail().y;
 
-            // 6. [关键修复] 使用安全的 if-else 结构，而不是提前返回
-            if (display_data.empty() || time_data.empty())
-            {
-                // 分支1: 数据为空时, 不做任何绘图操作
-            }
-            else
-            {
-                // 分支2: 数据存在, 执行所有绘图逻辑
+        // 开始绘制现代化图表 - 使用剩余的全部高度
+        ImPlot::PushStyleColor(ImPlotCol_PlotBg, ImVec4(0.08f, 0.10f, 0.14f, 1.0f));
+        if (ImPlot::BeginPlot("##Chart", ImVec2(-1, remaining_height),
+            ImPlotFlags_NoTitle | ImPlotFlags_NoMenus)) {
 
-                // 确保选中的通道在有效范围内
-                if (selected_channel >= 0 && selected_channel < display_data.size() && !display_data[selected_channel].empty()) {
-                    auto& channel_data = display_data[selected_channel];
-                    size_t data_size = std::min(channel_data.size(), time_data.size());
+            if (!display_data.empty() && !time_data.empty() &&
+                selected_channel >= 0 && selected_channel < display_data.size() &&
+                !display_data[selected_channel].empty()) {
 
-                    if (data_size > 0) {
-                        // 设置坐标轴标签
-                        ImPlot::SetupAxis(ImAxis_X1, "数据点");
-                        ImPlot::SetupAxis(ImAxis_Y1, "数据值");
+                auto& channel_data = display_data[selected_channel];
+                size_t data_size = std::min(channel_data.size(), time_data.size());
 
-                        // 计算数据范围用于自动缩放
-                        float min_time = *std::min_element(time_data.begin(), time_data.begin() + data_size);
-                        float max_time = *std::max_element(time_data.begin(), time_data.begin() + data_size);
-                        float min_data = *std::min_element(channel_data.begin(), channel_data.begin() + data_size);
-                        float max_data = *std::max_element(channel_data.begin(), channel_data.begin() + data_size);
-
-                        // 自动缩放设置
-                        if (auto_scale || reset_zoom) {
-                            if (min_time != max_time) {
-                                float time_margin = (max_time - min_time) * 0.05f;  // 5%边距
-                                ImPlot::SetupAxisLimits(ImAxis_X1, min_time - time_margin, max_time + time_margin,
-                                                       reset_zoom ? ImGuiCond_Always : ImGuiCond_Once);
-                            }
-                            if (min_data != max_data) {
-                                float data_margin = (max_data - min_data) * 0.1f;  // 10%边距
-                                ImPlot::SetupAxisLimits(ImAxis_Y1, min_data - data_margin, max_data + data_margin,
-                                                       reset_zoom ? ImGuiCond_Always : ImGuiCond_Once);
-                            }
-                            reset_zoom = false;
-                        }
-
-                        // 绘制选中通道的数据
-                        ImPlot::SetNextLineStyle(ImVec4(0.2f, 0.8f, 0.2f, 1.0f), 2.0f);  // 绿色线条
-                        std::string legend_name = "通道 " + std::to_string(selected_channel);
-                        ImPlot::PlotLine(legend_name.c_str(),
-                                       time_data.data(),
-                                       channel_data.data(),
-                                       data_size);
-
-                        // // 显示统计信息
-                        // if (ImPlot::IsPlotHovered()) {
-                        //     float mean = 0.0f;
-                        //     for (size_t i = 0; i < data_size; ++i) {
-                        //         mean += channel_data[i];
-                        //     }
-                        //     mean /= data_size;
-
-                        //     std::string info_text = "通道" + std::to_string(selected_channel) + " 均值: " + std::to_string(mean);
-                        //     ImPlot::PlotText(info_text.c_str(),
-                        //                    min_time + (max_time - min_time) * 0.05f,
-                        //                    min_data + (max_data - min_data) * 0.95f);
-                        // }
-                    }
-                } else {
-                    // 如果选中通道无效，显示提示信息
+                if (data_size > 0) {
+                    // 设置坐标轴 - 现代化样式
                     ImPlot::SetupAxis(ImAxis_X1, "时间");
-                    ImPlot::SetupAxis(ImAxis_Y1, "数据值");
-                    ImPlot::PlotText("无效的通道或无数据", 0.5f, 0.5f);
+                    ImPlot::SetupAxis(ImAxis_Y1, "角度");
+
+                    // 计算数据范围
+                    float min_time = *std::min_element(time_data.begin(), time_data.begin() + data_size);
+                    float max_time = *std::max_element(time_data.begin(), time_data.begin() + data_size);
+                    float min_data = *std::min_element(channel_data.begin(), channel_data.begin() + data_size);
+                    float max_data = *std::max_element(channel_data.begin(), channel_data.begin() + data_size);
+
+                    // 自动缩放设置
+                    if (auto_scale || reset_zoom) {
+                        if (min_time != max_time) {
+                            float time_margin = (max_time - min_time) * 0.05f;
+                            ImPlot::SetupAxisLimits(ImAxis_X1, min_time - time_margin, max_time + time_margin,
+                                                   reset_zoom ? ImGuiCond_Always : ImGuiCond_Once);
+                        }
+                        if (min_data != max_data) {
+                            float data_margin = (max_data - min_data) * 0.1f;
+                            ImPlot::SetupAxisLimits(ImAxis_Y1, min_data - data_margin, max_data + data_margin,
+                                                   reset_zoom ? ImGuiCond_Always : ImGuiCond_Once);
+                        }
+                        reset_zoom = false;
+                    }
+
+                    // 使用蓝色渐变线条 - 匹配设计
+                    ImPlot::SetNextLineStyle(ImVec4(0.30f, 0.60f, 1.00f, 0.9f), 1.5f);
+                    ImPlot::SetNextFillStyle(ImVec4(0.20f, 0.50f, 0.90f, 0.3f));
+
+                    std::string legend_name = "Ch " + std::to_string(selected_channel);
+                    ImPlot::PlotLine(legend_name.c_str(), time_data.data(), channel_data.data(), data_size);
+
+                    // 可选：添加填充效果
+                    ImPlot::PlotShaded(legend_name.c_str(), time_data.data(), channel_data.data(), data_size);
                 }
+            } else {
+                // 数据为空或无效通道时的显示
+                ImPlot::SetupAxis(ImAxis_X1, "时间");
+                ImPlot::SetupAxis(ImAxis_Y1, "角度");
+                ImPlot::SetupAxisLimits(ImAxis_X1, 0, 100, ImGuiCond_Always);
+                ImPlot::SetupAxisLimits(ImAxis_Y1, 0, 100, ImGuiCond_Always);
             }
 
-            // 7. 确保 ImPlot::EndPlot() 在 if (BeginPlot...) 内部的最后被调用
             ImPlot::EndPlot();
         }
+        ImPlot::PopStyleColor(1);
     });
+
+    ImGui::PopStyleColor(2);
+    ImGui::PopStyleVar(2);
     ImGui::End();
 }

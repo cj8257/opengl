@@ -26,67 +26,98 @@ void SystemControl::drawControlButtons() {
     float windowWidth = io.DisplaySize.x;
     float windowHeight = io.DisplaySize.y;
 
-    // 设置按钮窗口位置（右上角）
-    ImGui::SetNextWindowPos(ImVec2(windowWidth - 300, 20), ImGuiCond_Always);
-    ImGui::SetNextWindowSize(ImVec2(280, 80), ImGuiCond_Always);
+    // 设置按钮窗口位置（右上角，匹配设计图）
+    ImGui::SetNextWindowPos(ImVec2(20, 20), ImGuiCond_Always);
+    ImGui::SetNextWindowSize(ImVec2(windowWidth - 40, 70), ImGuiCond_Always);
 
-    // 创建系统控制按钮窗口
-    ImGui::Begin("系统控制", nullptr,
+    // 创建系统控制按钮窗口（无标题栏，现代风格）
+    ImGui::Begin("##SystemControl", nullptr,
         ImGuiWindowFlags_NoResize |
-        // ImGuiWindowFlags_NoMove |
+        ImGuiWindowFlags_NoMove |
         ImGuiWindowFlags_NoCollapse |
-        ImGuiWindowFlags_NoTitleBar);
+        ImGuiWindowFlags_NoTitleBar |
+        ImGuiWindowFlags_NoScrollbar);
 
-    // 设置按钮样式
-    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(10, 5));
+    // 设置现代按钮样式
+    ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, ImVec2(12, 8));
+    ImGui::PushStyleVar(ImGuiStyleVar_ItemSpacing, ImVec2(12, 8));
 
-    // 开始按钮（绿色）
+    // 计算垂直居中位置
+    float controlWindowHeight = ImGui::GetWindowHeight();
+    float contentHeight = 35; // 按钮高度
+    float centerY = (controlWindowHeight - contentHeight) * 0.5f;
+    ImGui::SetCursorPosY(centerY);
+
+    // --- 1. 绘制左侧的系统名称（增大字体） ---
+    ImGui::PushFont(nullptr); // 使用默认字体，但设置缩放
+    ImGui::SetWindowFontScale(1.8f); // 增大字体 30%
+    ImGui::Text("信号处理系统"); // 字体加载失败时的备用方案
+    ImGui::SetWindowFontScale(1.0f); // 恢复正常字体大小
+    ImGui::PopFont();
+    // --- 2. 让按钮组和标题在同一行 ---
+    ImGui::SameLine();
+        // 1. 定义按钮和间距的尺寸
+        float buttonWidth = 85.0f;
+        float itemSpacingX = ImGui::GetStyle().ItemSpacing.x;
+        int buttonCount = 3;
+    
+        // 2. 计算所有按钮和间距的总宽度
+        float totalButtonsWidth = (buttonWidth * buttonCount) + (itemSpacingX * (buttonCount - 1));
+    
+        // 3. 获取窗口内容区域的可用宽度
+        float availableWidth = ImGui::GetContentRegionAvail().x;
+    
+        // 4. 计算右对齐的起始X坐标，并设置光标位置（增加右边距）
+        float rightMargin = -150.0f; // 增加右边距
+        if (availableWidth > totalButtonsWidth + rightMargin) {
+            ImGui::SetCursorPosX(availableWidth - totalButtonsWidth - rightMargin);
+        }
+    // 开始按钮 - 现代蓝色风格
     if (m_currentParams.status == SystemStatus::STOPPED) {
-        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.8f, 0.0f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 0.9f, 0.0f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.7f, 0.0f, 1.0f));
-        if (ImGui::Button("开始", ImVec2(80, 30))) {
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.20f, 0.50f, 0.90f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.30f, 0.60f, 1.00f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.15f, 0.40f, 0.80f, 1.0f));
+        if (ImGui::Button("▶ 开始", ImVec2(buttonWidth, 35))) {
             onStartClicked();
         }
         ImGui::PopStyleColor(3);
     } else {
-        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.3f, 0.3f, 0.3f, 1.0f));
-        ImGui::Button("开始", ImVec2(80, 30)); // 禁用状态
-        ImGui::PopStyleColor(1);
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.25f, 0.25f, 0.28f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.50f, 0.50f, 0.55f, 1.0f));
+        ImGui::Button("▶ 开始", ImVec2(buttonWidth, 35)); // 禁用状态
+        ImGui::PopStyleColor(2);
     }
 
     ImGui::SameLine();
 
-    // 关闭按钮（红色）
+    // 关闭按钮 - 现代红色风格
     if (m_currentParams.status == SystemStatus::RUNNING) {
-        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.8f, 0.0f, 0.0f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.9f, 0.0f, 0.0f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.7f, 0.0f, 0.0f, 1.0f));
-        if (ImGui::Button("关闭", ImVec2(80, 30))) {
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.85f, 0.25f, 0.25f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.95f, 0.35f, 0.35f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.75f, 0.15f, 0.15f, 1.0f));
+        if (ImGui::Button("X 关闭", ImVec2(buttonWidth, 35))) {
             onStopClicked();
         }
         ImGui::PopStyleColor(3);
     } else {
-        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.3f, 0.3f, 0.3f, 1.0f));
-        ImGui::Button("关闭", ImVec2(80, 30)); // 禁用状态
-        ImGui::PopStyleColor(1);
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.25f, 0.25f, 0.28f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.50f, 0.50f, 0.55f, 1.0f));
+        ImGui::Button("X 关闭", ImVec2(buttonWidth, 35)); // 禁用状态
+        ImGui::PopStyleColor(2);
     }
 
     ImGui::SameLine();
 
-    // 系统按钮（蓝色）
-    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.0f, 0.4f, 0.8f, 1.0f));
-    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.0f, 0.5f, 0.9f, 1.0f));
-    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.0f, 0.3f, 0.7f, 1.0f));
-    if (ImGui::Button("系统", ImVec2(80, 30))) {
+    // 系统按钮 - 现代灰蓝色风格
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.35f, 0.40f, 0.50f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.45f, 0.50f, 0.60f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.25f, 0.30f, 0.40f, 1.0f));
+    if (ImGui::Button("⚙ 系统", ImVec2(buttonWidth, 35))) {
         onSystemClicked();
     }
     ImGui::PopStyleColor(3);
 
-    // 显示当前状态
-    ImGui::Text("状态: %s", m_currentParams.status == SystemStatus::RUNNING ? "运行中" : "已停止");
-
-    ImGui::PopStyleVar();
+    ImGui::PopStyleVar(2);
     ImGui::End();
 }
 
