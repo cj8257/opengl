@@ -9,6 +9,7 @@
 #include <cstdint>
 #include <functional>
 #include <condition_variable>
+#include <chrono>
 
 class DataManager {
 public:
@@ -25,6 +26,8 @@ public:
     void clear();
     void setPlayState(bool playing);
     bool isPlaying() const;
+    bool isDataStreamActive() const; // 检查数据流是否活跃
+    void setFrameMode(bool enable);  // 设置帧模式 - 数据断开时不清空显示
     
     // 显示参数控制
     void setUpdateRate(int fps);
@@ -43,11 +46,13 @@ private:
     static constexpr double SAMPLE_RATE         = 22500.0;
     static constexpr size_t PACKAGE_SIZE        = 4 * CHANNEL_COUNT * SAMPLES_PER_PACKET; // 4096
 
-    // 历史原始数据容量（每通道最多保留的样本数）
-    static constexpr size_t CHANNEL_HISTORY_SIZE = 20000;
+    // 历史原始数据容量（每通道最多保留的样本数）- 大幅减少缓冲以实现实时响应
+    static constexpr size_t CHANNEL_HISTORY_SIZE = 1000;
     // 显示点数范围（降采样后每通道显示的点数范围）
     static constexpr size_t MIN_DISPLAY_POINTS   = 100;
     static constexpr size_t MAX_DISPLAY_POINTS   = 2000;
+    // 数据流检测超时时间（毫秒）- 更快检测数据流停止
+    static constexpr int DATA_STREAM_TIMEOUT_MS = 100;
 
     // 原始数据（仅处理线程写入/读取）
     std::vector<std::deque<float>> m_rawChannelData;
@@ -71,8 +76,13 @@ private:
     std::thread m_processingThread;
     
     // 显示控制参数
-    std::atomic<int> m_updateFps{30};          // 目标更新帧率
+    std::atomic<int> m_updateFps{60};          // 目标更新帧率 - 提高到60fps以减少延时
     std::atomic<size_t> m_targetDisplayPoints{1000}; // 目标显示点数
     std::string m_type{""}; // 图表类型。注意：空字符串是 "" 而不是 ''
     mutable std::mutex m_type_mutex; // 用于保护 m_type 的互斥锁
+
+    // 数据流检测
+    std::chrono::steady_clock::time_point m_lastDataTime; // 最后接收数据的时间
+    std::atomic<bool> m_isDataStreamActive{false}; // 数据流是否活跃
+    std::atomic<bool> m_frameMode{false}; // 帧模式 - 数据断开时保持显示
 };

@@ -1,5 +1,12 @@
 {
     "files.associations": {
-        "cstdio": "cpp"
+        "cstdio": "cpp",
+        "iostream": "cpp",
+        "chrono": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "thread": "cpp"
     }
 }

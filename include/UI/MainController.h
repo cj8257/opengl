@@ -16,6 +16,9 @@ public:
     void drawUI();
     void togglePlayback();
 
+    // 获取数据流状态 - 用于UI显示
+    bool isDataStreamActive() const;
+
 private:
     DataManager dataManager;
     SocketSubscriber subscriber;

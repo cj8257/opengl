@@ -7,6 +7,7 @@ DataManager::DataManager() {
     m_rawChannelData.resize(CHANNEL_COUNT);        // 调整原始通道数据容器大小，为128个通道分配空间
     m_frontDisplayData.resize(CHANNEL_COUNT);      // 调整前台显示数据容器大小，为128个通道分配空间
     m_backDisplayData.resize(CHANNEL_COUNT);       // 调整后台显示数据容器大小，为128个通道分配空间
+    m_lastDataTime = std::chrono::steady_clock::now(); // 初始化最后接收数据的时间
     m_processingThread = std::thread(&DataManager::processDataLoop, this); // 创建后台处理线程，执行processDataLoop方法
 }
 
@@ -23,6 +24,11 @@ DataManager::~DataManager() {
 void DataManager::addBinaryPacket(const std::vector<uint8_t>& packet_data) {
     if (packet_data.size() != PACKAGE_SIZE) return; // 检查数据包大小是否正确（应为4096字节），不正确则直接返回
     if (!m_isPlaying.load()) return;                 // 检查播放状态，如果暂停则不处理新数据
+
+    // 更新最后接收数据的时间并标记数据流为活跃
+    m_lastDataTime = std::chrono::steady_clock::now();
+    m_isDataStreamActive = true;
+
     {                                                 // 创建作用域来限制锁的范围
         std::lock_guard<std::mutex> lk(m_queueMutex); // 获取队列互斥锁，防止多线程同时访问队列
         m_packetQueue.emplace_back(packet_data);      // 将数据包添加到处理队列末尾
@@ -42,7 +48,28 @@ void DataManager::processDataLoop() {
                 return m_shouldStop.load() || !m_packetQueue.empty();   // 等待条件：停止信号或队列非空
             });
             if (m_shouldStop.load()) break;              // 如果收到停止信号，跳出循环
-            if (m_packetQueue.empty()) {                 // 如果队列为空，继续下一次循环
+            if (m_packetQueue.empty()) {                 // 如果队列为空，检查数据流状态
+                // 检查数据流是否超时
+                auto now = std::chrono::steady_clock::now();
+                auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - m_lastDataTime);
+                if (elapsed.count() > DATA_STREAM_TIMEOUT_MS) {
+                    if (m_isDataStreamActive.load()) {  // 如果之前是活跃状态，现在超时了
+                        m_isDataStreamActive = false;   // 标记数据流为不活跃
+
+                        // 根据模式决定是否清空缓冲区
+                        if (!m_frameMode.load()) {  // 非帧模式时才清空缓冲
+                            // 清空所有缓冲区，立即停止显示
+                            for (auto& ch : m_rawChannelData) ch.clear(); // 清空原始数据缓冲
+                            {
+                                std::lock_guard<std::mutex> lk(m_displayMutex);
+                                for (auto& ch : m_frontDisplayData) ch.clear();
+                                for (auto& ch : m_backDisplayData) ch.clear();
+                                m_frontTimeValues.clear();
+                                m_backTimeValues.clear();
+                            }
+                        }
+                    }
+                }
                 continue;
             }
             packet = std::move(m_packetQueue.front());   // 从队列前端取出数据包，使用移动语义避免拷贝
@@ -191,10 +218,23 @@ void DataManager::clear() {
 }
 
 // 设置播放状态的方法
-void DataManager::setPlayState(bool playing) { m_isPlaying = playing; }     // 设置播放状态标志
+void DataManager::setPlayState(bool playing) {
+    m_isPlaying = playing;
+    // 重新开始播放时重置数据流状态
+    if (playing) {
+        m_lastDataTime = std::chrono::steady_clock::now();
+        m_isDataStreamActive = true;
+    }
+}
 
 // 获取播放状态的方法
 bool DataManager::isPlaying() const { return m_isPlaying.load(); }          // 返回当前播放状态
+
+// 检查数据流是否活跃的方法
+bool DataManager::isDataStreamActive() const { return m_isDataStreamActive.load(); }
+
+// 设置帧模式 - 数据断开时保持显示
+void DataManager::setFrameMode(bool enable) { m_frameMode = enable; }
 
 // 设置更新帧率的方法
 void DataManager::setUpdateRate(int fps) { 

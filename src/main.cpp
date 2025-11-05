@@ -14,6 +14,10 @@
 static void glfw_error_callback(int error, const char* description) {
     std::cerr << "GLFW Error " << error << ": " << description << std::endl; // 输出错误信息到标准错误流
 }
+
+// 频谱图连接配置
+static char spectrogram_host[256] = "127.0.0.1";  // 频谱图数据源地址
+static int spectrogram_port = 5556;               // 频谱图数据源端口
 // 初始化 ImGui 和字体
 static void InitImGui(GLFWwindow* window) {
 
@@ -147,6 +151,9 @@ int main() {
     
     // 用于控制频谱图窗口显示的布尔标志
     bool show_spectrogram = true;
+
+    // 用于跟踪系统状态变化的变量
+    SystemStatus lastSystemStatus = SystemStatus::STOPPED;
     
     // 输出程序启动信息到控制台
     std::cout << "SensorMonitorApp started with refactored architecture" << std::endl;
@@ -163,6 +170,19 @@ int main() {
         // 处理GLFW事件 - 处理键盘、鼠标等输入事件
         glfwPollEvents();
 
+        // 检查系统状态变化并控制数据接收
+        SystemStatus currentSystemStatus = systemControl.getSystemStatus();
+        if (currentSystemStatus != lastSystemStatus) {
+            if (currentSystemStatus == SystemStatus::RUNNING) {
+                // 系统开始运行，启动数据接收
+                frameController1.startReceiving();
+            } else if (currentSystemStatus == SystemStatus::STOPPED) {
+                // 系统停止，停止数据接收但不清空显示的数据
+                frameController1.stopReceiving();
+            }
+            lastSystemStatus = currentSystemStatus;
+        }
+
         // 开始新的ImGui帧
         ImGui_ImplOpenGL3_NewFrame(); // 开始OpenGL渲染后端的新帧
         ImGui_ImplGlfw_NewFrame();    // 开始GLFW输入后端的新帧
@@ -171,23 +191,18 @@ int main() {
         // 使用MainController绘制UI（模块化架构）
         // mainController.drawUI(); // 调用主控制器的UI绘制方法
 
-        // 使用FrameController绘制帧数据快照UI
-        frameController1.drawUI(900, 110, 1000, 460,"谱图1"); // 调用帧控制器的UI绘制方法
-
+        // 使用FrameController绘制帧数据快照UI（图表框架始终渲染，数据显示不受系统状态控制）
+        frameController1.update(); // 更新数据流状态检测
+        frameController1.drawUI(900, 110, 1000, 460,"谱图1", true); // 调用帧控制器的UI绘制方法，始终显示数据
          // 使用FrameController绘制帧数据快照UI
-         frameController2.drawUI(900, 590, 1000, 460,"谱图2"); // 调用帧控制器的UI绘制方法
-
+         frameController2.update(); // 更新数据流状态检测
+         frameController2.drawUI(900, 590, 1000, 460,"谱图2", true); // 调用帧控制器的UI绘制方法，始终显示数据
         // 绘制系统控制按钮（右上角的三个按钮）
         systemControl.drawControlButtons();
-
         // 绘制系统参数配置窗口（如果需要显示）
         systemControl.drawSystemConfigWindow();
-        
-        // 直接显示频谱图窗口
-        if (show_spectrogram) { // 如果频谱图窗口开关为true
-            ShowSpectrogramWindow(&show_spectrogram); // 显示频谱图窗口
-        }
-
+        // 直接显示频谱图窗口，传递配置的地址和端口，并受系统状态控制
+        ShowSpectrogramWindow(&show_spectrogram, std::string(spectrogram_host), spectrogram_port, systemControl.getSystemStatus() == SystemStatus::RUNNING); // 显示频谱图窗口
         // 渲染
         ImGui::Render(); // 结束ImGui帧并准备渲染数据
         int display_w, display_h; // 声明显示区域宽高变量
@@ -200,6 +215,7 @@ int main() {
     }
 
     // 清理资源
+    CleanupSpectrogramResources();       // 清理频谱图资源
     ImPlot::DestroyContext();        // 销毁ImPlot上下文
     ImGui_ImplOpenGL3_Shutdown();    // 关闭ImGui OpenGL后端
     ImGui_ImplGlfw_Shutdown();       // 关闭ImGui GLFW后端
